@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.vv.zvv"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".XUtilsActivity">
+        </activity>
+        <activity android:name=".StorageActivity">
+        </activity>
+        <activity android:name=".ExternalStorageActivity">
+        </activity>
+        <activity android:name=".SharedPreferenceActivity">
+        </activity>
+        <activity android:name=".AsyncTaskActivity">
+        </activity>
+        <activity android:name=".DataPikerActivity">
+        </activity>
+        <activity android:name=".ProgressActivity">
+        </activity>
+        <activity android:name=".DatabaseActivity">
+        </activity>
+        <activity android:name=".CursorAdapterActivity">
+        </activity>
+        <activity android:name=".SimpleCursorAdapterActivity">
+        </activity>
+        <activity android:name=".SimpleAdapterActivity">
+        </activity>
+        <activity android:name=".BroadcastActivity">
+        </activity>
+
+        <!-- 注册广播 -->
+        <receiver android:name=".Utils.MyBroadCastReceiverRegisterInManifest">
+            <intent-filter android:priority="900">
+                <action android:name="com.vv.zvv_sendBroadcast"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ServiceActivity">
+        </activity>
+
+        <service android:name=".Utils.MyService"/>
+        <service android:name=".Utils.MyBoundService"/>
+
+        <activity android:name=".CountDownTimerActivity">
+        </activity>
+        <activity android:name=".ScrollViewActivity">
+        </activity>
+    </application>
+
+</manifest>

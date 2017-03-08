@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.vv.zvv.DatabaseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="展示数据"/>
+
+            <Button
+                android:id="@+id/btn_createDb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="创建Db"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="增"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="删"/>
+
+            <Button
+                android:id="@+id/btn_modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="改"/>
+
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="查"/>
+
+            <Button
+                android:id="@+id/btn_deleteAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="删全部"/>
+
+            <Button
+                android:id="@+id/btn_SimpleAdapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SimpleAdapter"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_SimpleCursorAdapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SimpleCursorAdapter"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_CursorAdapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CursorAdapter"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
