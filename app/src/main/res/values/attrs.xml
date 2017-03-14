@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button = TextView = Button-->
+    <declare-styleable name="ZvvTopBar">
+        <!--标题-->
+        <attr name="titleZvvTopBar" format="string"/>
+        <attr name="titleTextSizeZvvTopBar" format="dimension"/>
+        <attr name="titleTextColorZvvTopBar" format="color"/>
+        <attr name="titleBackGroundZvvTopBar" format="reference|color"/>
+
+        <!--左边按钮-->
+        <attr name="leftTitleZvvTopBar" format="string"/>
+        <attr name="leftTextSizeZvvTopBar" format="dimension"/>
+        <attr name="leftTextColorZvvTopBar" format="color"/>
+        <attr name="leftBackGroundZvvTopBar" format="color|reference"/>
+
+        <!--右边按钮-->
+        <attr name="rightTitleZvvTopBar" format="string"/>
+        <attr name="rightTextSizeZvvTopBar" format="dimension"/>
+        <attr name="rightTextColorZvvTopBar" format="color"/>
+        <attr name="rightBackGroundZvvTopBar" format="color|reference"/>
+    </declare-styleable>
+</resources>

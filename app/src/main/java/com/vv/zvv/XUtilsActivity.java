@@ -12,6 +12,8 @@ import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
 import com.vv.zvv.Adress.MethodGet;
 import com.vv.zvv.JavaBean.ProductList;
+import com.vv.zvv.Utils.ToastUtil;
+import com.vv.zvv.Utils.ZvvTopBar;
 
 import org.xutils.common.Callback;
 import org.xutils.common.util.DensityUtil;
@@ -30,6 +32,11 @@ public class XUtilsActivity extends AppCompatActivity {
 
     @ViewInject(R.id.btn_xUtilsHttpREquest_XUtilsActivity)
     private Button btn_xUtilsHttpREquest;
+
+    @ViewInject(R.id.zvvTopBar)
+    private ZvvTopBar mZvvTopBar;
+
+
     ImageOptions imageOptions = new ImageOptions.Builder()
             .setSize(DensityUtil.dip2px(120), DensityUtil.dip2px(120))//图片大小
 //            .setRadius(DensityUtil.dip2px(5))//ImageView圆角半径
@@ -52,6 +59,20 @@ public class XUtilsActivity extends AppCompatActivity {
         mMainActivity = new MainActivity();
         x.view().inject(this);
 
+        //自定义控件
+        mZvvTopBar.setOnTopBarClickListener(new ZvvTopBar.TopBarClickListener() {
+            @Override
+            public void LeftClick() {
+                finish();
+            }
+
+            @Override
+            public void RightClick() {
+                new ToastUtil(XUtilsActivity.this).ToastShort("美有更多了");
+            }
+        });
+
+        mZvvTopBar.setButtonVisible(false, false);
     }
 
     @Event(value = {R.id.iv_xUtilsImage_XUtilsActivity, R.id.btn_xUtilsHttpREquest_XUtilsActivity, R.id.btn_modify_XUtilsActivity}, type = View.OnClickListener.class)

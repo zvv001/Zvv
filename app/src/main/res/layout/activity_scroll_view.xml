@@ -4,35 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vv.zvv.ScrollViewActivity">
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Title"
-        android:textSize="25sp"/>
 
     <com.vv.zvv.Utils.MyScrollView
         android:id="@+id/msv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_title">
+        android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Title"
+                android:textSize="25sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="1000dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/iv_01"
@@ -54,6 +52,12 @@
                     android:layout_below="@+id/iv_02"
                     android:background="#340000ff"/>
 
+                <ImageView
+                    android:id="@+id/iv_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/iv_03"
+                    android:background="#34ff0000"/>
 
             </RelativeLayout>
 
@@ -103,7 +107,7 @@
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewPage"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"/>
+                    android:layout_height="500dp"/>
             </LinearLayout>
         </LinearLayout>
     </com.vv.zvv.Utils.MyScrollView>
