@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
         //默认不显示 通知弹窗
         mLinearLayout.setVisibility(View.GONE);
         /*测试用*/
-        startActivity(new Intent(this, EditTextActivity.class));//直接跳转测试页
+//        startActivity(new Intent(this, EditTextActivity.class));//直接跳转测试页
     }
 
     /**
@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
     @Event(value = {R.id.btn_xUtils_MainActivity, R.id.btn_test01_MainActivity,
             R.id.btn_commonNotification, R.id.btn_customNotification, R.id.btn_cancelNotification, R.id.btn_progressNotification,
             R.id.btn_AsyncTask_MainActivity, R.id.btn_dataPiker, R.id.btn_notification, R.id.btn_ProgressBar, R.id.btn_dataBase,
-            R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer,R.id.btn_ScrollViewDemo,R.id.btn_EditTextDemo},
+            R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo, R.id.btn_SwipeRefreshLayout},
             type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
@@ -123,13 +123,16 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(this, ServiceActivity.class));
                 break;
             case R.id.btn_CountDownTimer://倒计时
-                startActivity(new Intent(this,CountDownTimerActivity.class));
+                startActivity(new Intent(this, CountDownTimerActivity.class));
                 break;
             case R.id.btn_ScrollViewDemo://ScrollView
-                startActivity(new Intent(this,ScrollViewActivity.class));
+                startActivity(new Intent(this, ScrollViewActivity.class));
                 break;
             case R.id.btn_EditTextDemo:
                 startActivity(new Intent(this, EditTextActivity.class));
+                break;
+            case R.id.btn_SwipeRefreshLayout:
+                startActivity(new Intent(this, SwipeRefreshLayoutActivity.class));
                 break;
             default:
                 break;
