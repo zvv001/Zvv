@@ -60,4 +60,11 @@
         android:layout_above="@+id/btn_xUtilsHttpREquest_XUtilsActivity"
         android:text="修改MainActivity中的数据"/>
 
+    <Button
+        android:id="@+id/btn_gotoBroadcastActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_modify_XUtilsActivity"
+        android:text="跳转到BroadcastActivity"/>
+
 </RelativeLayout>

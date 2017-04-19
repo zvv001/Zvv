@@ -1,5 +1,6 @@
 package com.vv.zvv;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -64,6 +65,7 @@ public class XUtilsActivity extends AppCompatActivity {
             @Override
             public void LeftClick() {
                 finish();
+//                overridePendingTransition(R.anim.close_enter, R.anim.close_exit);
             }
 
             @Override
@@ -75,7 +77,9 @@ public class XUtilsActivity extends AppCompatActivity {
         mZvvTopBar.setButtonVisible(false, false);
     }
 
-    @Event(value = {R.id.iv_xUtilsImage_XUtilsActivity, R.id.btn_xUtilsHttpREquest_XUtilsActivity, R.id.btn_modify_XUtilsActivity}, type = View.OnClickListener.class)
+    @Event(value = {R.id.iv_xUtilsImage_XUtilsActivity, R.id.btn_xUtilsHttpREquest_XUtilsActivity,
+            R.id.btn_modify_XUtilsActivity,R.id.btn_gotoBroadcastActivity},
+            type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_xUtilsImage_XUtilsActivity:
@@ -87,6 +91,9 @@ public class XUtilsActivity extends AppCompatActivity {
             case R.id.btn_modify_XUtilsActivity:
                 //使用
                 MainActivity.mOnModifyCallBack.Modify("Zvv");
+                break;
+            case R.id.btn_gotoBroadcastActivity:
+                startActivity(new Intent(this,BroadcastActivity.class));
                 break;
         }
     }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f5f4f2"
+    tools:context="com.vv.zvv.ListViewDemoActivity">
+
+
+    <com.vv.zvv.Utils.MyElasticListView
+        android:id="@+id/lv_ListViewDemoActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/f2901d"
+        android:dividerHeight="2dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"/>
+
+
+    <ImageView
+        android:id="@+id/iv_showNOData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ffffff"
+        android:src="@drawable/image_nodata"/>
+
+    <RelativeLayout
+        android:id="@+id/showTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/f5f4f2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="银行卡列表"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_ListViewDemoActivity"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/image_bank4"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>

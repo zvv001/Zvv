@@ -63,7 +63,8 @@ public class MainActivity extends Activity {
     @Event(value = {R.id.btn_xUtils_MainActivity, R.id.btn_test01_MainActivity,
             R.id.btn_commonNotification, R.id.btn_customNotification, R.id.btn_cancelNotification, R.id.btn_progressNotification,
             R.id.btn_AsyncTask_MainActivity, R.id.btn_dataPiker, R.id.btn_notification, R.id.btn_ProgressBar, R.id.btn_dataBase,
-            R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo, R.id.btn_SwipeRefreshLayout},
+            R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
+            R.id.btn_SwipeRefreshLayout,R.id.btn_ListView,R.id.btn_MyViewPager},
             type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
@@ -76,6 +77,7 @@ public class MainActivity extends Activity {
                     }
                 };
                 startActivity(new Intent(this, XUtilsActivity.class));
+//                overridePendingTransition(R.anim.open_enter,R.anim.open_exit);
                 break;
             /*存储*/
             case R.id.btn_test01_MainActivity:
@@ -133,6 +135,12 @@ public class MainActivity extends Activity {
                 break;
             case R.id.btn_SwipeRefreshLayout:
                 startActivity(new Intent(this, SwipeRefreshLayoutActivity.class));
+                break;
+            case R.id.btn_ListView://ListView的优化
+                startActivity(new Intent(this,ListViewDemoActivity.class));
+                break;
+            case R.id.btn_MyViewPager://自定义ViewPager
+                startActivity(new Intent(this,MyViewPagerActivity.class));
                 break;
             default:
                 break;

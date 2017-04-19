@@ -43,4 +43,6 @@
     <color name="c8c5c3">#c8c5c3</color>
     <color name="f4f4f4">#f4f4f4</color>
     <color name="e53d1b">#e53d1b</color>
+    <color name="black">#ff000000</color>
+    <color name="ffffff">#ffffff</color>
 </resources>

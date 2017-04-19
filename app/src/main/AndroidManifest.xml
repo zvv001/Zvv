@@ -12,7 +12,7 @@
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme_">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -60,9 +60,16 @@
 
         <activity android:name=".CountDownTimerActivity">
         </activity>
-        <activity android:name=".ScrollViewActivity">
-        </activity>
         <activity android:name=".EditTextActivity">
+        </activity>
+        <activity android:name=".ScrollViewActivity"/>
+        <activity android:name=".SwipeRefreshLayoutActivity">
+        </activity>
+        <activity
+            android:name=".ListViewDemoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".MyViewPagerActivity">
         </activity>
     </application>
 
