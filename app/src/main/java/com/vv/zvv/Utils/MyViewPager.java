@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -18,7 +19,8 @@ public class MyViewPager extends ViewGroup {
     private static final String TAG = "MyViewPager";
     private GestureDetector mGestureDetector;
     //图片的ID
-    int[] imageId = {R.drawable.guide1, R.drawable.guide2, R.drawable.guide3, R.drawable.guide4};
+    int[] imageId = {R.drawable.image_bank1, R.drawable.image_bank2, R.drawable.image_bank3, R.drawable.image_bank4};
+//    int[] imageId = {R.drawable.guide1, R.drawable.guide2, R.drawable.guide3, R.drawable.guide4};//
 
     public MyViewPager(Context context) {
         super(context);
@@ -49,39 +51,39 @@ public class MyViewPager extends ViewGroup {
             this.addView(imageView);
         }
 
-//        mGestureDetector = new GestureDetector(getContext(), new GestureDetector.OnGestureListener() {
-//            @Override
-//            public boolean onDown(MotionEvent e) {
-//                return false;
-//            }
-//
-//            @Override
-//            public void onShowPress(MotionEvent e) {
-//
-//            }
-//
-//            @Override
-//            public boolean onSingleTapUp(MotionEvent e) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-//                //
-//                scrollBy((int) distanceX, 0);
-//                return false;
-//            }
-//
-//            @Override
-//            public void onLongPress(MotionEvent e) {
-//
-//            }
-//
-//            @Override
-//            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//                return false;
-//            }
-//        });
+        mGestureDetector = new GestureDetector(getContext(), new GestureDetector.OnGestureListener() {
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return false;
+            }
+
+            @Override
+            public void onShowPress(MotionEvent e) {
+
+            }
+
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                return false;
+            }
+
+            @Override
+            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+                //
+                scrollBy((int) distanceX, 0);
+                return false;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+
+            }
+
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                return false;
+            }
+        });
     }
 
     /**
@@ -101,24 +103,28 @@ public class MyViewPager extends ViewGroup {
         }
     }
 
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        //将Touch事件委托给mGestureDetector进行处理，消耗Touch事件
-//        mGestureDetector.onTouchEvent(event);
-////        return super.onTouchEvent(event);
-//        switch (event.getAction()) {
-//            case MotionEvent.ACTION_DOWN:
-//
-//                break;
-//            case MotionEvent.ACTION_HOVER_MOVE:
-//
-//                break;
-//            case MotionEvent.ACTION_UP://离开
-//                int scrollX = getScrollX();
-//                Log.d(TAG, "onTouchEvent: " + scrollX);
-//
-//                break;
-//        }
-//        return true;
-//    }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //将Touch事件委托给mGestureDetector进行处理，消耗Touch事件
+        mGestureDetector.onTouchEvent(event);
+//        return super.onTouchEvent(event);
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+
+                break;
+            case MotionEvent.ACTION_HOVER_MOVE:
+
+                break;
+            case MotionEvent.ACTION_UP://离开
+                int scrollX = getScrollX();
+                //超过屏幕一半，count加1
+                int count = (scrollX + getWidth() / 2) / getWidth();
+                if (count>=imageId.length){
+                    count = count-1;
+                }
+                scrollTo(count * getWidth(), 0);
+                break;
+        }
+        return true;
+    }
 }
