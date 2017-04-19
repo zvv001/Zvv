@@ -119,6 +119,8 @@ public class MyViewPager extends ViewGroup {
                 int scrollX = getScrollX();
                 //超过屏幕一半，count加1
                 int count = (scrollX + getWidth() / 2) / getWidth();
+
+                //不能滑过边界
                 if (count>=imageId.length){
                     count = count-1;
                 }
