@@ -69,8 +69,10 @@
             android:name=".ListViewDemoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity
-            android:name=".MyViewPagerActivity">
+        <activity android:name=".MyViewPagerActivity">
+        </activity>
+        <activity android:name=".MyCustomView"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>
 

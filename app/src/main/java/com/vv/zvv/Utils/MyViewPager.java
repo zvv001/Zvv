@@ -8,6 +8,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Scroller;
 
 import com.vv.zvv.R;
 
@@ -18,9 +19,11 @@ import com.vv.zvv.R;
 public class MyViewPager extends ViewGroup {
     private static final String TAG = "MyViewPager";
     private GestureDetector mGestureDetector;
-    //图片的ID
+    //图片的ID 图片太大时，运行时异常
     int[] imageId = {R.drawable.image_bank1, R.drawable.image_bank2, R.drawable.image_bank3, R.drawable.image_bank4};
 //    int[] imageId = {R.drawable.guide1, R.drawable.guide2, R.drawable.guide3, R.drawable.guide4};//
+
+    private Scroller mScroller;
 
     public MyViewPager(Context context) {
         super(context);
@@ -45,6 +48,8 @@ public class MyViewPager extends ViewGroup {
 
 
     private void initView() {
+        mScroller = new Scroller(getContext());
+
         for (int i = 0; i < imageId.length; i++) {
             ImageView imageView = new ImageView(getContext());
             imageView.setBackgroundResource(imageId[i]);
@@ -121,12 +126,28 @@ public class MyViewPager extends ViewGroup {
                 int count = (scrollX + getWidth() / 2) / getWidth();
 
                 //不能滑过边界
-                if (count>=imageId.length){
-                    count = count-1;
+                if (count >= imageId.length) {
+                    count = count - 1;
                 }
-                scrollTo(count * getWidth(), 0);
+//                scrollTo(count * getWidth(), 0);
+                //平滑的滑动
+                mScroller.startScroll(scrollX, 0, count * getWidth() - scrollX, 0, Math.abs(count * getWidth()));
+                //invalidate这个方法会有执行一个回调方法computeScroll
+                invalidate();
                 break;
         }
         return true;
+    }
+
+    /**
+     * 其实Scroller的原理就是用ScrollTo来一段一段的进行，最后看上去跟自然的一样，必须使用postInvalidate，这样才会一直回调computeScroll这个方法，直到滑动结束。
+     */
+    @Override
+    public void computeScroll() {
+        if (mScroller.computeScrollOffset()) {
+            scrollTo(mScroller.getCurrX(), 0);
+            postInvalidate();
+        }
+//        super.computeScroll();
     }
 }
