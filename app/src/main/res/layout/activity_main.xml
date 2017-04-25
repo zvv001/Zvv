@@ -114,6 +114,46 @@
                 android:layout_below="@+id/btn_CountDownTimer"
                 android:text="ScrollViewDemo"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_EditTextDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_CountDownTimer"
+                android:text="EditTextDemo"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_SwipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_CountDownTimer"
+                android:text="SwipeRefreshLayout"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_ListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_CountDownTimer"
+                android:text="ListView优化"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_MyViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_CountDownTimer"
+                android:text="自定义ViewPager"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_MyCustomView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_CountDownTimer"
+                android:text="自定义View展示"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
     </ScrollView>

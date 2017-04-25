@@ -11,4 +11,6 @@ public class MethodGet extends BaseAddress {
     public String getProductList() {
         return getBaseAddress() + "/api/v2/products/more/4.json";
     }
+
+
 }
