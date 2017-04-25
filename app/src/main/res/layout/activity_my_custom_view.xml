@@ -7,6 +7,7 @@
     android:background="@color/f5f4f2"
     tools:context="com.vv.zvv.MyCustomView">
 
+    <!--电子券-->
     <com.vv.zvv.Utils.MyElectronicCoupons
         android:id="@+id/mec"
         android:layout_width="match_parent"
@@ -35,16 +36,15 @@
             android:textSize="20sp"/>
     </com.vv.zvv.Utils.MyElectronicCoupons>
 
-    <com.vv.zvv.Utils.MyCustomViewDemo01
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/mec"
-        android:background="@color/ffffff">
-
-    </com.vv.zvv.Utils.MyCustomViewDemo01>
-
+    <!--网状图-->
     <com.vv.zvv.Utils.MyPolygonView
         android:layout_width="300dp"
         android:layout_height="240dp"
+        android:layout_alignParentRight="true"/>
+
+    <!--折线图-->
+    <com.vv.zvv.Utils.MyLineChartView
+        android:layout_width="300dp"
+        android:layout_height="350dp"
         android:layout_centerInParent="true"/>
 </RelativeLayout>

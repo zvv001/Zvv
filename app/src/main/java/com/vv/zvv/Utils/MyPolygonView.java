@@ -178,6 +178,7 @@ public class MyPolygonView extends View {
 
             x = (float) (Math.cos(i * angle) * r);
             y = (float) (Math.sin(i * angle) * r);
+
             //位置微调
             if (x < 0) {
                 x = x - textWidth;
