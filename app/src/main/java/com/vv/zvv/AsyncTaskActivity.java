@@ -28,6 +28,7 @@ public class AsyncTaskActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
 
 
+
     @ViewInject(R.id.btn_loadImage_AsyncTaskActivity)
     private Button btn_loadImage;
 
