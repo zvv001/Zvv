@@ -44,7 +44,12 @@
 
     <!--折线图-->
     <com.vv.zvv.Utils.MyLineChartView
-        android:layout_width="300dp"
-        android:layout_height="350dp"
+        android:layout_width="350dp"
+        android:layout_height="380dp"
         android:layout_centerInParent="true"/>
+
+    <!--圆环-->
+    <com.vv.zvv.Utils.MyChatView
+        android:layout_width="220dp"
+        android:layout_height="200dp"/>
 </RelativeLayout>

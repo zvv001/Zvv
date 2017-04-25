@@ -78,7 +78,7 @@ public class MyLineChartView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //画布左下角移动
+        //画布移到左下角，留出100的空间给予文字填充
         canvas.translate(100, height - 100);
         //初始化画笔
         initPaint();
@@ -151,16 +151,9 @@ public class MyLineChartView extends View {
             canvas.drawCircle(i * xGap, 0, 5, mPointPaint);
         }
 
-        //折线的点
-//        for (int i = 0; i < xAxisNumber; i++) {
-//            if (percent[i] > 0) {
-//                canvas.drawCircle(i * xGap, -(float) (percent[i] / 10 * yGap), 5, mPointPaint);
-//            } else {
-//                canvas.drawCircle(i * xGap, 0, 5, mPointPaint);
-//            }
-//        }
     }
 
+    //折线和圆点
     private void initLineChart(Canvas canvas) {
         Path mPath = new Path();
         float xPoint = 0;
@@ -198,8 +191,8 @@ public class MyLineChartView extends View {
 
         //顶部文字
         Rect mRect = new Rect();
-        mTextPaint.getTextBounds(title,0,title.length(),mRect);
-        canvas.drawText(title,0,-((yAxisNumber-1)*yGap+mRect.height()),mTextPaint);
+        mTextPaint.getTextBounds(title, 0, title.length(), mRect);
+        canvas.drawText(title, 0, -((yAxisNumber - 1) * yGap + mRect.height()), mTextPaint);
     }
 }
 
