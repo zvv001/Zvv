@@ -7,16 +7,64 @@
     android:background="@color/f5f4f2"
     tools:context="com.vv.zvv.MyCustomView">
 
+    <!--底部按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_MyElectronicCoupons"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_round_button"
+            android:text="展示电子券"/>
+
+        <Button
+            android:id="@+id/btn_MyPolygonView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_round_button"
+            android:text="网状图"/>
+
+        <Button
+            android:id="@+id/btn_MyLineChartView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_round_button"
+            android:text="折线图"/>
+
+        <Button
+            android:id="@+id/btn_MyChatView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_round_button"
+            android:text="圆环图形"/>
+
+        <Button
+            android:id="@+id/btn_MyTimeView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_round_button"
+            android:text="展示钟表"/>
+    </LinearLayout>
+
     <!--电子券-->
     <com.vv.zvv.Utils.MyElectronicCoupons
-        android:id="@+id/mec"
+        android:id="@+id/cv_MyElectronicCoupons"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
+        android:layout_height="100dp"
         android:layout_margin="20dp"
         android:background="@color/z00bed4"
         android:orientation="horizontal"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,18 +86,32 @@
 
     <!--网状图-->
     <com.vv.zvv.Utils.MyPolygonView
+        android:id="@+id/cv_MyPolygonView"
         android:layout_width="300dp"
         android:layout_height="240dp"
-        android:layout_alignParentRight="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
     <!--折线图-->
     <com.vv.zvv.Utils.MyLineChartView
+        android:id="@+id/cv_MyLineChartView"
         android:layout_width="350dp"
         android:layout_height="380dp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
     <!--圆环-->
     <com.vv.zvv.Utils.MyChatView
+        android:id="@+id/cv_MyChatView"
         android:layout_width="220dp"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <!--钟表图-->
+    <com.vv.zvv.Utils.MyTimeView
+        android:id="@+id/cv_MyTimeView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

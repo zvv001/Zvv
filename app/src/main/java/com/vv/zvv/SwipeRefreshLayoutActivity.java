@@ -38,7 +38,7 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity {
             .setCircular(false)//圆形图片
             .build();
 
-    private String ivUrl = new FinalAddress().getPICTUREURL();
+    private String ivUrl = new FinalAddress().getBIG_PIC();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -32,7 +32,7 @@ public class StorageActivity extends AppCompatActivity {
     private String fileName = "file_name";
 
     //缓存文件名(包含随机名)
-    private String patch;
+    private String patch = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,28 +151,28 @@ public class StorageActivity extends AppCompatActivity {
         StringBuffer sb = new StringBuffer();
         BufferedReader br = null;
         //获取目标的缓存文件
-        File tempfile = new File(patch);
-        try {
-            FileInputStream fis = new FileInputStream(tempfile);
-            br = new BufferedReader(new InputStreamReader(fis));
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
-            }
-            textView.setText(sb.toString());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+            File tempfile = new File(patch);
+            try {
+                FileInputStream fis = new FileInputStream(tempfile);
+                br = new BufferedReader(new InputStreamReader(fis));
+                String line = null;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line);
+                }
+                textView.setText(sb.toString());
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (br != null) {
+                    try {
+                        br.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
-        }
     }
 
     //删除内部存储的文件

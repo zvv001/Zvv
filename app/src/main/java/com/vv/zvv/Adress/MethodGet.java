@@ -12,5 +12,4 @@ public class MethodGet extends BaseAddress {
         return getBaseAddress() + "/api/v2/products/more/4.json";
     }
 
-
 }

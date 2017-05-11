@@ -65,7 +65,7 @@ public class MyChatView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        //移动画布到圆环的左上角
+        //移动画布到圆环的左上角 -坐标原点移动到居中的圆环左上角
         canvas.translate(mWidth / 2 - mRadius / 2, mHeight / 2 - mRadius / 2);
         //初始化画笔
         initPaint();
@@ -111,7 +111,15 @@ public class MyChatView extends View {
             startPercent = sweepPercent + startPercent;
             //这里采用比例占100的百分比乘于360的来计算出占用的角度，使用先乘再除可以算出值
             sweepPercent = strPercent[i] * 360 / 100;
-            //计算机
+
+            //绘制圆环
+            /**
+             * @param oval       The bounds of oval used to define the shape and size of the arc
+             * @param startAngle Starting angle (in degrees) where the arc begins
+             * @param sweepAngle Sweep angle (in degrees) measured clockwise
+             * @param useCenter If true, include the center of the oval in the arc, and close it if it is being stroked. This will draw a wedge
+             * @param paint      The paint used to draw the arc
+             */
             canvas.drawArc(new RectF(0, 0, mRadius, mRadius), startPercent, sweepPercent, false, cyclePaint);
         }
     }

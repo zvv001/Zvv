@@ -31,7 +31,6 @@
                 android:id="@+id/btn_xUtils_MainActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_title_MainActivity"
                 android:text="xUtils"
                 android:textAllCaps="false"/>
 
@@ -39,7 +38,6 @@
                 android:id="@+id/btn_test01_MainActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_xUtils_MainActivity"
                 android:text="存储"
                 android:textAllCaps="false"/>
 
@@ -47,7 +45,6 @@
                 android:id="@+id/btn_AsyncTask_MainActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="AsyncTask"
                 android:textAllCaps="false"/>
 
@@ -55,7 +52,6 @@
                 android:id="@+id/btn_dataPiker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="Data/TimerPiker"
                 android:textAllCaps="false"/>
 
@@ -63,7 +59,6 @@
                 android:id="@+id/btn_notification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="Notification"
                 android:textAllCaps="false"/>
 
@@ -71,7 +66,6 @@
                 android:id="@+id/btn_ProgressBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="ProgressBar"
                 android:textAllCaps="false"/>
 
@@ -79,7 +73,6 @@
                 android:id="@+id/btn_dataBase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="DataBase"
                 android:textAllCaps="false"/>
 
@@ -87,7 +80,6 @@
                 android:id="@+id/btn_broadcast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="Broadcast"
                 android:textAllCaps="false"/>
 
@@ -95,7 +87,6 @@
                 android:id="@+id/btn_service"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="Service"
                 android:textAllCaps="false"/>
 
@@ -103,7 +94,6 @@
                 android:id="@+id/btn_CountDownTimer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_test01_MainActivity"
                 android:text="CountDownTimer"
                 android:textAllCaps="false"/>
 
@@ -111,7 +101,6 @@
                 android:id="@+id/btn_ScrollViewDemo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_CountDownTimer"
                 android:text="ScrollViewDemo"
                 android:textAllCaps="false"/>
 
@@ -119,7 +108,6 @@
                 android:id="@+id/btn_EditTextDemo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_CountDownTimer"
                 android:text="EditTextDemo"
                 android:textAllCaps="false"/>
 
@@ -127,7 +115,6 @@
                 android:id="@+id/btn_SwipeRefreshLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_CountDownTimer"
                 android:text="SwipeRefreshLayout"
                 android:textAllCaps="false"/>
 
@@ -135,7 +122,6 @@
                 android:id="@+id/btn_ListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_CountDownTimer"
                 android:text="ListView优化"
                 android:textAllCaps="false"/>
 
@@ -143,7 +129,6 @@
                 android:id="@+id/btn_MyViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_CountDownTimer"
                 android:text="自定义ViewPager"
                 android:textAllCaps="false"/>
 
@@ -151,8 +136,14 @@
                 android:id="@+id/btn_MyCustomView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_CountDownTimer"
                 android:text="自定义View展示"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_RetrofitActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="retrofit"
                 android:textAllCaps="false"/>
         </LinearLayout>
 

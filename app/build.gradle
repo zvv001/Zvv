@@ -4,6 +4,9 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+    /*为了学习HttpClient - Android SDK中包含了HttpClient，在Android6.0版本直接删除了HttpClient类库*/
+    useLibrary 'org.apache.http.legacy'
+
     defaultConfig {
         applicationId "com.vv.zvv"
         minSdkVersion 15
@@ -24,8 +27,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    //    compile 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+    /*xUtils依赖*/
     compile 'org.xutils:xutils:3.3.40'
-    compile 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
-    compile 'com.alibaba:fastjson:1.2.24'
+    /*gson 将请求下的数据转换*/
     compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.alibaba:fastjson:1.2.31'
+    /*retrofit*/
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
 }

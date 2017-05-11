@@ -4,13 +4,15 @@ import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import org.xutils.image.ImageOptions;
+import com.vv.zvv.Adress.FinalAddress;
+
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -22,11 +24,8 @@ import java.net.URL;
 
 public class AsyncTaskActivity extends AppCompatActivity {
     private static final String TAG = "AsyncTaskActivity";
-    // 网络图片地址
-    private final String IMG_URL = "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png";
     // 进度条对话框
     private ProgressDialog progressDialog;
-
 
 
     @ViewInject(R.id.btn_loadImage_AsyncTaskActivity)
@@ -57,9 +56,7 @@ public class AsyncTaskActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_loadImage_AsyncTaskActivity:
                 // 创建异步任务工具，并执行下载的操作
-//                new ImageTask().execute(IMG_URL);
-
-                loadImage();
+                new ImageTask().execute(new FinalAddress().getIMG_URL());
                 break;
         }
     }
@@ -80,6 +77,7 @@ public class AsyncTaskActivity extends AppCompatActivity {
             // 请求访问的url地址
             String requestUrl = params[0];
             try {
+                disableConnectionReuse();//HttpURLConnection 在Android 2.2版本之前的一个bug
                 URL url = new URL(requestUrl);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
@@ -138,23 +136,15 @@ public class AsyncTaskActivity extends AppCompatActivity {
         }
     }
 
-    //xUtils下载图片
-    private void loadImage() {
-        ImageOptions imageOptions = new ImageOptions.Builder()
-                // 加载中或错误图片的ScaleType
-                //.setPlaceholderScaleType(ImageView.ScaleType.MATRIX)
-                // 默认自动适应大小
-                // .setSize(...)
-                .setIgnoreGif(false)
-                // 如果使用本地文件url, 添加这个设置可以在本地文件更新后刷新立即生效.
-                //.setUseMemCache(false)
-                //设置图片为圆形
-                //.setCircular(true)
-                //设置圆角半径
-                //.setRadius(50)
-                //设置图片样式
-                .setImageScaleType(ImageView.ScaleType.FIT_XY).build();
-        x.image().bind(mImageView, IMG_URL, imageOptions);
+    /**
+     * Android 2.2版本之前，HttpURLConnection一直存在着一些令人厌烦的bug。
+     * 比如说对一个可读的InputStream调用close()方法时，就有可能会导致连接池失效了。那么我们通常的解决办法就是直接禁用掉连接池的功能：
+     */
+    private void disableConnectionReuse() {
+        // 这是一个2.2版本之前的bug
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.FROYO) {
+            System.setProperty("http.keepAlive", "false");
+        }
     }
 }
 
