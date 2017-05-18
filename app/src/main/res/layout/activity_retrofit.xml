@@ -15,4 +15,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="点击请求数据"/>
+
+    <Button
+        android:id="@+id/btn_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_requestData"
+        android:text="Snackbar"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_btn_toastUtil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_snackbar"
+        android:text="ToastUtil"
+        android:textAllCaps="false"/>
 </RelativeLayout>

@@ -1,12 +1,14 @@
 package com.vv.zvv;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.vv.zvv.JavaBean.Repo;
+import com.vv.zvv.Utils.ToastUtils;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.x;
@@ -31,13 +33,23 @@ public class RetrofitActivity extends AppCompatActivity {
         x.view().inject(this);
     }
 
-    @Event(value = {R.id.btn_requestData}, type = View.OnClickListener.class)
+    @Event(value = {R.id.btn_requestData, R.id.btn_snackbar, R.id.btn_btn_toastUtil}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_requestData://请求数据
                 Log.d("vv", "点击按钮");
                 //请求数据
                 testRetrofitHttpGet();
+            case R.id.btn_snackbar:
+                Snackbar.make(getWindow().getDecorView(), "这是massage", Snackbar.LENGTH_LONG).setAction("这是action", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(RetrofitActivity.this, "你点击了action", Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
+                break;
+            case R.id.btn_btn_toastUtil:
+                ToastUtils.showMessage(RetrofitActivity.this,"点击了！");
                 break;
             default:
                 break;
