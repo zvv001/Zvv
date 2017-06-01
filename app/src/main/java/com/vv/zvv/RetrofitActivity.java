@@ -40,16 +40,18 @@ public class RetrofitActivity extends AppCompatActivity {
                 Log.d("vv", "点击按钮");
                 //请求数据
                 testRetrofitHttpGet();
-            case R.id.btn_snackbar:
-                Snackbar.make(getWindow().getDecorView(), "这是massage", Snackbar.LENGTH_LONG).setAction("这是action", new View.OnClickListener() {
+            case R.id.btn_snackbar://Snackbar
+                final Snackbar snackbar = Snackbar.make(getWindow().getDecorView(), "这是massage", Snackbar.LENGTH_LONG);
+                snackbar.setAction("取消", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(RetrofitActivity.this, "你点击了action", Toast.LENGTH_SHORT).show();
+                        snackbar.dismiss();
                     }
-                }).show();
+                });
+                snackbar.show();
                 break;
             case R.id.btn_btn_toastUtil:
-                ToastUtils.showMessage(RetrofitActivity.this,"点击了！");
+                ToastUtils.showMessage(RetrofitActivity.this, "点击了！");
                 break;
             default:
                 break;
