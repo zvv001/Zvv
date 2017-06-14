@@ -11,9 +11,16 @@
     tools:context="com.vv.zvv.RetrofitActivity">
 
     <Button
+        android:id="@+id/btn_requestData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击请求数据"/>
+
+    <Button
         android:id="@+id/btn_snackbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_requestData"
         android:text="Snackbar"
         android:textAllCaps="false"/>
 
@@ -24,15 +31,7 @@
         android:layout_below="@+id/btn_snackbar"
         android:text="ToastUtil"
         android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_requestData"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_btn_toastUtil"
-        android:text="点击请求数据"/>
-    <!--CoordinatorLayout：作为Snackbar创建时的容器，可以保证Snackbar可以让用户向右互动退出
-    当然不适用也没关系-->
+    <!--Snackbar的容器-->
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
