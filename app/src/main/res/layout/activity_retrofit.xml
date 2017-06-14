@@ -31,4 +31,10 @@
         android:layout_below="@+id/btn_snackbar"
         android:text="ToastUtil"
         android:textAllCaps="false"/>
+    <!--Snackbar的容器-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

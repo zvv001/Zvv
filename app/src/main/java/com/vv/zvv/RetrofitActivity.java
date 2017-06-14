@@ -1,6 +1,7 @@
 package com.vv.zvv;
 
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +12,7 @@ import com.vv.zvv.JavaBean.Repo;
 import com.vv.zvv.Utils.ToastUtils;
 
 import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.util.List;
@@ -24,6 +26,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public class RetrofitActivity extends AppCompatActivity {
+    @ViewInject(R.id.container)
+    private CoordinatorLayout mCoordinatorLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,9 @@ public class RetrofitActivity extends AppCompatActivity {
                 //请求数据
                 testRetrofitHttpGet();
             case R.id.btn_snackbar:
-                Snackbar.make(getWindow().getDecorView(), "这是massage", Snackbar.LENGTH_LONG).setAction("这是action", new View.OnClickListener() {
+//                Snackbar.make(getWindow().getDecorView(), "这是massage", Snackbar.LENGTH_LONG).setAction("这是action", new View.OnClickListener() {
+                /**/
+                Snackbar.make(mCoordinatorLayout, "这是massage", Snackbar.LENGTH_LONG).setAction("这是action", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(RetrofitActivity.this, "你点击了action", Toast.LENGTH_SHORT).show();
