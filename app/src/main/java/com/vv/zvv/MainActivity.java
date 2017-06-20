@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
             R.id.btn_AsyncTask_MainActivity, R.id.btn_dataPiker, R.id.btn_notification, R.id.btn_ProgressBar, R.id.btn_dataBase,
             R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
             R.id.btn_SwipeRefreshLayout, R.id.btn_ListView, R.id.btn_MyViewPager, R.id.btn_MyCustomView, R.id.btn_RetrofitActivity,
-            R.id.btn_threeExpandableListView}, type = View.OnClickListener.class)
+            R.id.btn_threeExpandableListView,R.id.btn_getLocalPicture}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             /*xUtils3.0的使用*/
@@ -150,6 +150,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.btn_threeExpandableListView:// 三级联动
                 startActivity(new Intent(this, ThreeExpandableListViewActivity.class));
+                break;
+            case R.id.btn_getLocalPicture://获取本地图片
+                startActivity(new Intent(this, ShowLocalPictureActivity.class));
                 break;
             default:
                 break;

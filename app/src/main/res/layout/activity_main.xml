@@ -12,13 +12,14 @@
 
     <TextView
         android:id="@+id/tv_title_MainActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/scrollView_01"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/tv_title_MainActivity"
         android:background="#fff">
 
@@ -192,4 +193,23 @@
             android:text="取消通知"/>
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_title_MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_getLocalPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取本地图片"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

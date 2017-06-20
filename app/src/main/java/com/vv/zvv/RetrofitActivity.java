@@ -55,7 +55,7 @@ public class RetrofitActivity extends AppCompatActivity {
                 }).show();
                 break;
             case R.id.btn_btn_toastUtil:
-                ToastUtils.showMessage(RetrofitActivity.this,"点击了！");
+                ToastUtils.showMessage(RetrofitActivity.this, "点击了！");
                 break;
             default:
                 break;

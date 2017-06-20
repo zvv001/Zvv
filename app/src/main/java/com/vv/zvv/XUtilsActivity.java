@@ -83,7 +83,7 @@ public class XUtilsActivity extends AppCompatActivity {
 
             @Override
             public void RightClick() {
-                new ToastUtil(XUtilsActivity.this).ToastShort("美有更多了");
+                ToastUtil.showShortToast(XUtilsActivity.this,"没有更多了");
             }
         });
 
