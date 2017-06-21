@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.vv.zvv.MainActivity">
+    tools:context=".activity.MainActivity">
 
     <TextView
         android:id="@+id/tv_title_MainActivity"
@@ -209,6 +209,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="获取本地图片"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="地址选择器"
                 android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>

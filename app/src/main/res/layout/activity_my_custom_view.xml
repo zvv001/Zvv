@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/f5f4f2"
-    tools:context="com.vv.zvv.MyCustomView">
+    tools:context=".activity.MyCustomView">
 
     <!--底部按钮-->
     <LinearLayout
@@ -85,7 +85,7 @@
     </com.vv.zvv.Utils.MyElectronicCoupons>
 
     <!--网状图-->
-    <com.vv.zvv.Utils.MyPolygonView
+    <com.vv.zvv.Utils.view.MyPolygonView
         android:id="@+id/cv_MyPolygonView"
         android:layout_width="300dp"
         android:layout_height="240dp"
@@ -93,7 +93,7 @@
         android:visibility="gone"/>
 
     <!--折线图-->
-    <com.vv.zvv.Utils.MyLineChartView
+    <com.vv.zvv.Utils.view.MyLineChartView
         android:id="@+id/cv_MyLineChartView"
         android:layout_width="350dp"
         android:layout_height="380dp"
@@ -101,7 +101,7 @@
         android:visibility="gone"/>
 
     <!--圆环-->
-    <com.vv.zvv.Utils.MyChatView
+    <com.vv.zvv.Utils.view.MyChatView
         android:id="@+id/cv_MyChatView"
         android:layout_width="220dp"
         android:layout_height="200dp"
@@ -109,7 +109,7 @@
         android:visibility="gone"/>
 
     <!--钟表图-->
-    <com.vv.zvv.Utils.MyTimeView
+    <com.vv.zvv.Utils.view.MyTimeView
         android:id="@+id/cv_MyTimeView"
         android:layout_width="300dp"
         android:layout_height="300dp"

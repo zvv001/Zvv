@@ -5,8 +5,7 @@
     xmlns:zvv="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3400ff00"
-    tools:context="com.vv.zvv.XUtilsActivity">
+    android:background="#3400ff00">
 
     <com.vv.zvv.Utils.ZvvTopBar
         android:id="@+id/zvvTopBar"
@@ -24,7 +23,7 @@
         zvv:titleTextSizeZvvTopBar="5sp"
         zvv:titleZvvTopBar="自定义ZvvTopBar"/>
 
-    <com.vv.zvv.Utils.MyTextView
+    <com.vv.zvv.Utils.view.MyTextView
         android:id="@+id/tv_title_XUtilsActivity"
         android:layout_width="200dp"
         android:layout_height="50dp"

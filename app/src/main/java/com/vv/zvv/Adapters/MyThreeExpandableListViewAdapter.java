@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.vv.zvv.JavaBean.College;
 import com.vv.zvv.R;
-import com.vv.zvv.Utils.CustomExpandableListView;
+import com.vv.zvv.Utils.view.CustomExpandableListView;
 
 import java.util.List;
 

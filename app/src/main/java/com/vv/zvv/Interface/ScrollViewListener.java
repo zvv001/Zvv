@@ -1,6 +1,6 @@
 package com.vv.zvv.Interface;
 
-import com.vv.zvv.Utils.MyScrollView;
+import com.vv.zvv.Utils.view.MyScrollView;
 
 /**
  * Created by zvv on 2017/3/3 15:18.

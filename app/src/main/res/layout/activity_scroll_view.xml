@@ -5,5 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/f5f4f2"
-    tools:context="com.vv.zvv.ScrollViewActivity">
+    tools:context=".activity.ScrollViewActivity">
 </RelativeLayout>
