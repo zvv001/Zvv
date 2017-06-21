@@ -71,14 +71,13 @@ public class RegionSelectActivity extends AppCompatActivity {
     @Event(value = {R.id.btn_select, R.id.tv_showAddress}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_select:
+            case R.id.btn_select://地址选择方式一： assets中存 ".db文件"
                 DBCopyUtil.copyDataBaseFromAssets(this, "region.db");
                 startActivityForResult(new Intent(this, RegionSelectDialogActivity.class), REGION_REQUEST_CODE);
                 break;
-            case R.id.tv_showAddress://地址选择器第二种方法：
+            case R.id.tv_showAddress://地址选择方式二：assets中存放 "address.text文件"
                 Utils.hideKeyBoard(this);
                 chooseAddressWheel.show(view);
-
                 break;
         }
     }
