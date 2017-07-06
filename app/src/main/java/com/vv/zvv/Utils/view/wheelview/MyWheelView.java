@@ -24,6 +24,7 @@ import java.util.List;
 public class MyWheelView extends View {
 
     private int[] SHADOWS_FONT_SIZE = new int[]{12, 14, 16};
+    //渐变的颜色
     private int[] SHADOWS_COLORS = new int[]{0xefE9E9E9, 0xcfE9E9E9, 0x3fE9E9E9};// 0x 十六进制的前缀表示这个整数是十六进制
 
     private static final int ITEM_OFFSET_PERCENT = 0;

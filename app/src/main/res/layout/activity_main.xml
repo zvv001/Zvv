@@ -217,6 +217,13 @@
                 android:layout_height="wrap_content"
                 android:text="地址选择器"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏幕适配"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

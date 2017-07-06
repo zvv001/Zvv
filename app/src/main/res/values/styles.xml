@@ -52,7 +52,7 @@
         <item name="android:activityCloseExitAnimation">@anim/toright_activity_out</item>
     </style>
 
-    <style name="AppTheme_" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme_" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@style/Animation_Activity</item>
     </style>

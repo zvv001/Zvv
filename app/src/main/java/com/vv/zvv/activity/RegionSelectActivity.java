@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.vv.zvv.Interface.OnAddressChangeListener;
-import com.vv.zvv.JavaBean.AddressDtailsEntity;
+import com.vv.zvv.JavaBean.AddressDetailsEntity;
 import com.vv.zvv.JavaBean.AddressModel;
 import com.vv.zvv.R;
 import com.vv.zvv.Utils.ChooseAddressWheel;
@@ -57,10 +57,12 @@ public class RegionSelectActivity extends AppCompatActivity {
     private void initData() {
         String address = Utils.readAssert(this, "address.txt");
         AddressModel model = JsonUtil.parseJson(address, AddressModel.class);
+
         if (model != null) {
-            AddressDtailsEntity data = model.Result;
+            AddressDetailsEntity data = model.Result;
             if (data == null) return;
             tv_showAddress.setText(data.Province + " " + data.City + " " + data.Area);
+
             if (data.ProvinceItems != null && data.ProvinceItems.Province != null) {
                 chooseAddressWheel.setProvince(data.ProvinceItems.Province);
                 chooseAddressWheel.defaultValue(data.Province, data.City, data.Area);
@@ -82,6 +84,7 @@ public class RegionSelectActivity extends AppCompatActivity {
         }
     }
 
+    // 地址选择方式一： assets中存 ".db文件"
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

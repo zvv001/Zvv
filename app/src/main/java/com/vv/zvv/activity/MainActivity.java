@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
             R.id.btn_AsyncTask_MainActivity, R.id.btn_dataPiker, R.id.btn_notification, R.id.btn_ProgressBar, R.id.btn_dataBase,
             R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
             R.id.btn_SwipeRefreshLayout, R.id.btn_ListView, R.id.btn_MyViewPager, R.id.btn_MyCustomView, R.id.btn_RetrofitActivity,
-            R.id.btn_threeExpandableListView,R.id.btn_getLocalPicture,R.id.btn_address}, type = View.OnClickListener.class)
+            R.id.btn_threeExpandableListView,R.id.btn_getLocalPicture,R.id.btn_address,R.id.btn_screen}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             /*xUtils3.0的使用*/
@@ -157,6 +157,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.btn_address://地址选择器
                 startActivity(new Intent(this,RegionSelectActivity.class));
+                break;
+            case R.id.btn_screen://屏幕适配
+                startActivity(new Intent(this,ScreenActivity.class));
                 break;
             default:
                 break;

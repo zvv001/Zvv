@@ -17,19 +17,19 @@ package com.vv.zvv.Adapters;
 
 import android.content.Context;
 
-import com.vv.zvv.JavaBean.AddressDtailsEntity;
+import com.vv.zvv.JavaBean.AddressDetailsEntity;
 
 import java.util.List;
 
 
-public class CityWheelAdapter extends BaseWheelAdapter<AddressDtailsEntity.ProvinceEntity.CityEntity> {
-    public CityWheelAdapter(Context context, List<AddressDtailsEntity.ProvinceEntity.CityEntity> list) {
+public class CityWheelAdapter extends BaseWheelAdapter<AddressDetailsEntity.ProvinceEntity.CityEntity> {
+    public CityWheelAdapter(Context context, List<AddressDetailsEntity.ProvinceEntity.CityEntity> list) {
         super(context, list);
     }
 
     @Override
     protected CharSequence getItemText(int index) {
-        AddressDtailsEntity.ProvinceEntity.CityEntity data = getItemData(index);
+        AddressDetailsEntity.ProvinceEntity.CityEntity data = getItemData(index);
         if (data != null) {
             return data.Name;
         }

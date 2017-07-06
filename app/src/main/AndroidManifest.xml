@@ -87,6 +87,8 @@
         </activity>
         <activity android:name=".activity.RegionSelectDialogActivity">
         </activity>
+        <activity android:name=".activity.ScreenActivity">
+        </activity>
     </application>
 
 </manifest>

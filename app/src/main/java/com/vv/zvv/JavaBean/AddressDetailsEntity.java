@@ -2,7 +2,7 @@ package com.vv.zvv.JavaBean;
 
 import java.util.List;
 
-public class AddressDtailsEntity {
+public class AddressDetailsEntity {
     public int SellerId;
     public int OrderId;
     public String RecipientName;
