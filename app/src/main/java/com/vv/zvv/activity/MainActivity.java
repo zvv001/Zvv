@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 
 import com.vv.zvv.Callback.OnModifyCallBack;
 import com.vv.zvv.R;
+import com.vv.zvv.Utils.ToastUtil;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -66,7 +68,7 @@ public class MainActivity extends Activity {
             R.id.btn_AsyncTask_MainActivity, R.id.btn_dataPiker, R.id.btn_notification, R.id.btn_ProgressBar, R.id.btn_dataBase,
             R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
             R.id.btn_SwipeRefreshLayout, R.id.btn_ListView, R.id.btn_MyViewPager, R.id.btn_MyCustomView, R.id.btn_RetrofitActivity,
-            R.id.btn_threeExpandableListView,R.id.btn_getLocalPicture,R.id.btn_address,R.id.btn_screen}, type = View.OnClickListener.class)
+            R.id.btn_threeExpandableListView, R.id.btn_getLocalPicture, R.id.btn_address, R.id.btn_screen, R.id.btn_finger}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             /*xUtils3.0的使用*/
@@ -156,10 +158,17 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(this, ShowLocalPictureActivity.class));
                 break;
             case R.id.btn_address://地址选择器
-                startActivity(new Intent(this,RegionSelectActivity.class));
+                startActivity(new Intent(this, RegionSelectActivity.class));
                 break;
             case R.id.btn_screen://屏幕适配
-                startActivity(new Intent(this,ScreenActivity.class));
+                startActivity(new Intent(this, ScreenActivity.class));
+                break;
+            case R.id.btn_finger://指纹解锁
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    startActivity(new Intent(this, FingerActivity.class));
+                } else {
+                    ToastUtil.showShortToast(this, "SDK_INT<23");
+                }
                 break;
             default:
                 break;

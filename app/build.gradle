@@ -37,7 +37,6 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.mcxiaoke.volley:library:1.0.19'
-
     /* RegionSelectActivity 收货地址*/
-
+    compile 'com.facebook.fresco:fresco:1.3.0'
 }
