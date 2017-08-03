@@ -32,6 +32,7 @@ public class FingerActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finger);
+
         init();
     }
 
