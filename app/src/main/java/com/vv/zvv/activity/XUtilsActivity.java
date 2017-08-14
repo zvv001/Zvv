@@ -214,6 +214,4 @@ public class XUtilsActivity extends AppCompatActivity {
         super.onDestroy();
         imageOptions = null;
     }
-
-
 }

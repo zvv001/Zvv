@@ -231,6 +231,13 @@
                 android:layout_height="wrap_content"
                 android:text="指纹解锁"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo"
+                android:textAllCaps="false"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

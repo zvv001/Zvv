@@ -18,13 +18,13 @@ public class MyChatView extends View {
     //-------------必须给的数据相关-------------
     private String[] str = new String[]{"一年级", "二年级", "三年级", "四年级", "五年级", "六年级"};
     //分配比例大小，总比例大小为100,由于经过运算后最后会是99.55左右的数值，导致圆不能够重合，会留出点空白，所以这里的总比例大小我们用101
-    private int[] strPercent = new int[]{10, 25, 18, 41, 2, 5};
+    private int[] strPercent = new int[]{10, 20, 20, 40, 5, 5};
     //圆的直径
-    private float mRadius = 300;
+    private float mRadius = 500;//300
     //圆的粗细
     private float mStrokeWidth = 40;
     //文字大小
-    private int textSize = 20;
+    private int textSize = 30;
     //-------------画笔相关-------------
     //圆环的画笔
     private Paint cyclePaint;
@@ -120,7 +120,7 @@ public class MyChatView extends View {
              * @param useCenter If true, include the center of the oval in the arc, and close it if it is being stroked. This will draw a wedge
              * @param paint      The paint used to draw the arc
              */
-            canvas.drawArc(new RectF(0, 0, mRadius, mRadius), startPercent, sweepPercent, false, cyclePaint);
+            canvas.drawArc(new RectF(0, 0, mRadius, mRadius), startPercent, sweepPercent, false, cyclePaint);//false
         }
     }
 

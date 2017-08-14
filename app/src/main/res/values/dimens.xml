@@ -5,4 +5,5 @@
 
 
     <dimen name="button_round_conner">6dp</dimen>
+    <dimen name="item_round_size">200dp</dimen>
 </resources>
