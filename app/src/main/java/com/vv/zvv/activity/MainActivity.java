@@ -1,6 +1,5 @@
 package com.vv.zvv.activity;
 
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -27,7 +26,7 @@ import org.xutils.x;
 /**
  * xUtils注解的使用
  */
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
     //声明
     @ViewInject(R.id.tv_title_MainActivity)
     private TextView tv_title_MainActivity;
@@ -69,7 +68,7 @@ public class MainActivity extends Activity {
             R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
             R.id.btn_SwipeRefreshLayout, R.id.btn_ListView, R.id.btn_MyViewPager, R.id.btn_MyCustomView, R.id.btn_RetrofitActivity,
             R.id.btn_threeExpandableListView, R.id.btn_getLocalPicture, R.id.btn_address, R.id.btn_screen, R.id.btn_finger,
-            R.id.btn_demo}, type = View.OnClickListener.class)
+            R.id.btn_demo,R.id.btn_cardViewPager}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             /*xUtils3.0的使用*/
@@ -171,8 +170,11 @@ public class MainActivity extends Activity {
                     ToastUtil.showShortToast(this, "SDK_INT<23");
                 }
                 break;
-            case R.id.btn_demo:
-                startActivity(new Intent(this,DemoActivity.class));
+            case R.id.btn_cardViewPager://卡片侧滑
+                startActivity(new Intent(this,CardViewPagerActivity.class));
+                break;
+            case R.id.btn_demo:// Demo
+                startActivity(new Intent(this, DemoActivity.class));
                 break;
             default:
                 break;

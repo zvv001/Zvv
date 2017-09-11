@@ -1,8 +1,8 @@
 package com.vv.zvv.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +27,7 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-public class XUtilsActivity extends AppCompatActivity {
+public class XUtilsActivity extends Activity {
     MainActivity mMainActivity;
     private static final String TAG = "XUtilsActivity";
     @ViewInject(R.id.iv_xUtilsImage_XUtilsActivity)

@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.vv.zvv.activity.DemoActivity">
 
-    <!--轮播动画-->
+    <!--动画特效-->
     <com.vv.zvv.Utils.view.LoopViewMaizi.LoopView
         android:id="@+id/loopView"
         android:layout_width="match_parent"
         android:layout_height="240dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:visibility="gone">
 
         <include layout="@layout/item_round_01"/>
 
@@ -27,9 +28,11 @@
 
     </com.vv.zvv.Utils.view.LoopViewMaizi.LoopView>
 
+    <!---->
     <com.vv.zvv.Utils.view.CustomerViewDemo
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_centerInParent="true"
         android:background="@color/f5f4f2"/>
+
 </RelativeLayout>

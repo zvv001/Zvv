@@ -233,6 +233,13 @@
                 android:textAllCaps="false"/>
 
             <Button
+                android:id="@+id/btn_cardViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="卡片侧滑"
+                android:textAllCaps="false"/>
+
+            <Button
                 android:id="@+id/btn_demo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

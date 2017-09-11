@@ -1,12 +1,12 @@
 package com.vv.zvv.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.vv.zvv.R;
-import com.vv.zvv.Utils.view.MyChatView;
 import com.vv.zvv.Utils.MyElectronicCoupons;
+import com.vv.zvv.Utils.view.MyChatView;
 import com.vv.zvv.Utils.view.MyLineChartView;
 import com.vv.zvv.Utils.view.MyPolygonView;
 import com.vv.zvv.Utils.view.MyTimeView;
@@ -18,7 +18,7 @@ import org.xutils.x;
 /**
  * 我的自定义View的展示
  */
-public class MyCustomView extends AppCompatActivity {
+public class MyCustomView extends Activity {
     @ViewInject(R.id.cv_MyElectronicCoupons)
     private MyElectronicCoupons mMyElectronicCoupons;
 
