@@ -37,8 +37,6 @@ public class BaseActivity extends Activity {
     private WindowManager wm = null;
     private WindowManager.LayoutParams wmParams = null;
     private FloatScanView fsv = null;
-
-
     private AlertDialog dialog;
 
     @Override

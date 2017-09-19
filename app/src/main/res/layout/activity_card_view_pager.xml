@@ -4,15 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipChildren="false"
+    android:background="@color/f5f4f2"
     tools:context="com.vv.zvv.activity.CardViewPagerActivity">
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:clipChildren="false"/>
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--android:clipChildren="false"-->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/ffffff"
+                android:clipToPadding="false"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPager"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/app_name"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="600dp"
+                android:text="!!"
+                android:textSize="200sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 </RelativeLayout>
