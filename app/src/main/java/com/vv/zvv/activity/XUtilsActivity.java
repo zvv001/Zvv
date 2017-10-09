@@ -17,6 +17,7 @@ import com.vv.zvv.JavaBean.ProductList;
 import com.vv.zvv.R;
 import com.vv.zvv.Utils.ToastUtil;
 import com.vv.zvv.Utils.ZvvTopBar;
+import com.vv.zvv.Utils.view.DragFloatActionButton;
 
 import org.xutils.common.Callback;
 import org.xutils.common.util.DensityUtil;
@@ -38,6 +39,10 @@ public class XUtilsActivity extends Activity {
 
     @ViewInject(R.id.zvvTopBar)
     private ZvvTopBar mZvvTopBar;
+
+    @ViewInject(R.id.floatActionButton)
+    private DragFloatActionButton floatActionButton;
+
 
 //    ImageOptions imageOptions = new ImageOptions.Builder()
     // 加载中或错误图片的ScaleType
@@ -89,6 +94,14 @@ public class XUtilsActivity extends Activity {
         });
 
         mZvvTopBar.setButtonVisible(false, false);
+
+
+        floatActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtil.showLongToast(XUtilsActivity.this,"点击了！！！！！！");
+            }
+        });
     }
 
     @Event(value = {R.id.iv_xUtilsImage_XUtilsActivity, R.id.btn_xUtilsHttpREquest_XUtilsActivity,

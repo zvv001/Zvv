@@ -28,6 +28,7 @@ public class FingerActivity extends Activity {
     CancellationSignal mCancellationSignal;
     FingerprintManager.AuthenticationCallback mSelfCancelled;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -153,7 +154,7 @@ public class FingerActivity extends Activity {
     public void OnClick(View view) {
         switch (view.getId()) {
             case R.id.btn_useFinger://使用指纹
-                ToastUtil.showShortToast(this, Build.VERSION.SDK_INT+"");
+                ToastUtil.showShortToast(this, Build.VERSION.SDK_INT + "");
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (isFinger()) {
                         Toast.makeText(FingerActivity.this, "请进行指纹识别", Toast.LENGTH_LONG).show();

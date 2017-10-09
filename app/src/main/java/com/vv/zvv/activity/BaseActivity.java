@@ -19,7 +19,6 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.vv.zvv.R;
 import com.vv.zvv.Utils.view.FloatScanView;
@@ -52,26 +51,26 @@ public class BaseActivity extends Activity {
     private void init() {
 
         //创建dialog
-        dialog = new AlertDialog.Builder(this)
-                .setTitle("悬浮窗权限管理")
-                .setMessage("是否去开启悬浮窗权限？")
-                .setPositiveButton("是", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //打开权限设置
-                        openSetting();
-                    }
-                })
-                .setNegativeButton("否", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                })
-                .create();
-
-        //创建悬浮框
-        openPermission();
+//        dialog = new AlertDialog.Builder(this)
+//                .setTitle("悬浮窗权限管理")
+//                .setMessage("是否去开启悬浮窗权限？")
+//                .setPositiveButton("是", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        //打开权限设置
+//                        openSetting();
+//                    }
+//                })
+//                .setNegativeButton("否", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                })
+//                .create();
+//
+//        //创建悬浮框
+//        openPermission();
     }
 
     private void createFloatView() {
@@ -157,15 +156,15 @@ public class BaseActivity extends Activity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        wm.addView(fsv, wmParams);
+//        wm.addView(fsv, wmParams);
     }
 
 
     @Override
     protected void onStop() {
-        if (fsv != null) {
-            wm.removeView(fsv);
-        }
+//        if (fsv != null) {
+//            wm.removeView(fsv);
+//        }
         super.onStop();
     }
 
@@ -173,30 +172,30 @@ public class BaseActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (fsv != null) {
-            wm.removeView(fsv);
-        }
+//        if (fsv != null) {
+//            wm.removeView(fsv);
+//        }
     }
 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 11) {
-            if (isFloatWindowOpAllowed(this)) {//已经开启
-                createFloatView();
-            } else {
-                Toast.makeText(this, "开启悬浮窗失败", Toast.LENGTH_SHORT).show();
-            }
-        } else if (requestCode == 12) {
-            if (Build.VERSION.SDK_INT >= 23) {
-                if (!Settings.canDrawOverlays(BaseActivity.this)) {
-                    Toast.makeText(this, "权限授予失败,无法开启悬浮窗", Toast.LENGTH_SHORT).show();
-                } else {
-                    createFloatView();
-                }
-            }
-        }
+//        if (requestCode == 11) {
+//            if (isFloatWindowOpAllowed(this)) {//已经开启
+//                createFloatView();
+//            } else {
+//                Toast.makeText(this, "开启悬浮窗失败", Toast.LENGTH_SHORT).show();
+//            }
+//        } else if (requestCode == 12) {
+//            if (Build.VERSION.SDK_INT >= 23) {
+//                if (!Settings.canDrawOverlays(BaseActivity.this)) {
+//                    Toast.makeText(this, "权限授予失败,无法开启悬浮窗", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    createFloatView();
+//                }
+//            }
+//        }
     }
 
     /**

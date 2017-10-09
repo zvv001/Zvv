@@ -66,4 +66,12 @@
         android:layout_above="@+id/btn_modify_XUtilsActivity"
         android:text="跳转到BroadcastActivity"/>
 
+
+    <com.vv.zvv.Utils.view.DragFloatActionButton
+        android:id="@+id/floatActionButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_maizi"
+        android:layout_margin="30dp"/>
 </RelativeLayout>

@@ -11,9 +11,17 @@
     tools:context="com.vv.zvv.activity.FingerActivity">
 
     <Button
+        android:id="@+id/startBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/img_maizi"/>
+
+
+    <Button
         android:id="@+id/btn_useFinger"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="使用手势进行登录"
-        android:onClick="OnClick"/>
+        android:onClick="OnClick"
+        android:text="使用手势进行登录"/>
 </RelativeLayout>
