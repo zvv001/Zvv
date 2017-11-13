@@ -7,42 +7,42 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-        android:name=".MyApplication"
+        android:name=".Activity.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme_">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".XUtilsActivity">
+        <activity android:name=".Activity.XUtilsActivity">
         </activity>
-        <activity android:name=".StorageActivity">
+        <activity android:name=".Activity.StorageActivity">
         </activity>
-        <activity android:name=".ExternalStorageActivity">
+        <activity android:name=".Activity.ExternalStorageActivity">
         </activity>
-        <activity android:name=".SharedPreferenceActivity">
+        <activity android:name=".Activity.SharedPreferenceActivity">
         </activity>
-        <activity android:name=".AsyncTaskActivity">
+        <activity android:name=".Activity.AsyncTaskActivity">
         </activity>
-        <activity android:name=".DataPikerActivity">
+        <activity android:name=".Activity.DataPikerActivity">
         </activity>
-        <activity android:name=".ProgressActivity">
+        <activity android:name=".Activity.ProgressActivity">
         </activity>
-        <activity android:name=".DatabaseActivity">
+        <activity android:name=".Activity.DatabaseActivity">
         </activity>
-        <activity android:name=".CursorAdapterActivity">
+        <activity android:name=".Activity.CursorAdapterActivity">
         </activity>
-        <activity android:name=".SimpleCursorAdapterActivity">
+        <activity android:name=".Activity.SimpleCursorAdapterActivity">
         </activity>
-        <activity android:name=".SimpleAdapterActivity">
+        <activity android:name=".Activity.SimpleAdapterActivity">
         </activity>
-        <activity android:name=".BroadcastActivity">
+        <activity android:name=".Activity.BroadcastActivity">
         </activity>
 
         <!-- 注册广播 -->
@@ -52,34 +52,36 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".ServiceActivity">
+        <activity android:name=".Activity.ServiceActivity">
         </activity>
 
         <service android:name=".Utils.MyService"/>
         <service android:name=".Utils.MyBoundService"/>
 
-        <activity android:name=".CountDownTimerActivity">
+        <activity android:name=".Activity.CountDownTimerActivity">
         </activity>
-        <activity android:name=".EditTextActivity">
+        <activity android:name=".Activity.EditTextActivity">
         </activity>
-        <activity android:name=".ScrollViewActivity"/>
-        <activity android:name=".SwipeRefreshLayoutActivity">
-        </activity>
-        <activity
-            android:name=".ListViewDemoActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity android:name=".MyViewPagerActivity">
+        <activity android:name=".Activity.ScrollViewActivity"/>
+        <activity android:name=".Activity.SwipeRefreshLayoutActivity">
         </activity>
         <activity
-            android:name=".MyCustomView"
+            android:name=".Activity.ListViewDemoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".RetrofitActivity">
+        <activity android:name=".Activity.MyViewPagerActivity">
         </activity>
-        <activity android:name=".VolleyActivity">
+        <activity
+            android:name=".Views.MyCustomView"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".ThreeExpandableListViewActivity">
+        <activity android:name=".Activity.RetrofitActivity">
+        </activity>
+        <activity android:name=".Activity.VolleyActivity">
+        </activity>
+        <activity android:name=".Activity.ThreeExpandableListViewActivity">
+        </activity>
+        <activity android:name=".Activity.CircularAnimationChartViewActivity">
         </activity>
     </application>
 

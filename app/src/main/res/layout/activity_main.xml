@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.vv.zvv.MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <TextView
         android:id="@+id/tv_title_MainActivity"
@@ -152,6 +152,13 @@
                 android:layout_height="wrap_content"
                 android:text="三级联动"
                 android:textAllCaps="false"/>
+
+            <!--环（圆）形动态统计图-->
+            <Button
+                android:id="@+id/btn_CircularAnimationChartView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CircularAnimationChartView"/>
         </LinearLayout>
 
     </ScrollView>

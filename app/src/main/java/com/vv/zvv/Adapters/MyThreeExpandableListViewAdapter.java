@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.vv.zvv.JavaBean.College;
 import com.vv.zvv.R;
-import com.vv.zvv.Utils.CustomExpandableListView;
+import com.vv.zvv.Views.CustomExpandableListView;
 
 import java.util.List;
 
@@ -144,9 +144,9 @@ public class MyThreeExpandableListViewAdapter extends BaseExpandableListAdapter 
         customExpandableListView.setGroupIndicator(null);
 
         // 加载班级的适配器
-        MyExpandableListViewAdapter adapter = new MyExpandableListViewAdapter(college.getClassList(), mContext);
-
-        customExpandableListView.setAdapter(adapter);
+//        MyThreeExpandableListViewAdapter adapter = new MyThreeExpandableListViewAdapter(college.getClassList(), mContext);
+//
+//        customExpandableListView.addAdapter(adapter);
 
         customExpandableListView.setPadding(20, 0, 0, 0);
         return customExpandableListView;
