@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f5f4f2"
+    tools:context="com.vv.zvv.Activity.DecimalScaleRulerViewActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/ffe3bf">
+
+        <TextView
+            android:id="@+id/row_one_item_one"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:background="#7700ff00"
+            android:gravity="right|center_vertical"
+            android:text="w:70%, h:20%"
+            app:layout_heightPercent="20%"
+            app:layout_widthPercent="70%"/>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/z1ebcff"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <!--自定义滑动标尺-->
+    <RelativeLayout
+        android:id="@+id/position"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp">
+
+        <com.vv.zvv.Views.DecimalScaleRulerView
+            android:id="@+id/ruler_weight"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:background="#00ff00"/>
+
+        <ImageView
+            android:id="@+id/iv_pointer"
+            android:layout_width="68dp"
+            android:layout_height="14dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_pointer"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_user_weight_value_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/position"
+        android:layout_centerHorizontal="true"
+        android:text="65kg"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_progressPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_weight_value_two"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="0.00%"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <!--进度条-->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv_progressPercent"
+        android:layout_marginTop="10dp"
+        android:max="200"
+        android:progress="20"
+        android:progressDrawable="@drawable/progress_color_zvv"/>
+
+
+    <!--测试UI Demo-->
+    <View
+        android:layout_width="310dp"
+        android:layout_height="100dp"
+        android:background="@color/ff0000"/>
+</RelativeLayout>

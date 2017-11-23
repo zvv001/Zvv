@@ -4,6 +4,37 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="tblack">#55d2d2d2</color>
+    <color name="sssblack">#d2d2d2</color>
+    <color name="ssblack">#c9c9c9</color>
+    <color name="sblack">#999999</color>
+    <color name="purple">#790187</color>
+    <color name="black">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#ffff6f41</color>
+    <color name="c50">#333333</color>
+    <color name="c96">#969696</color>
+    <color name="c32">#323232</color>
+    <color name="f76e44">#f76e44</color>
+    <color name="cnull">#00ffffff</color>
+    <color name="eeeeeee">#ffeeeeee</color>
+    <color name="ffffff">#ffffff</color>
+    <color name="presell">#ff0096ff</color>
+    <color name="v5">#ffcccccc</color>
+    <color name="locusbar">#cc102D45</color>
+
+    <color name="green">#32b6ab</color>
+    <color name="orange">#e05a31</color>
+
+    <!-- 月返息状态字体的颜色 -->
+    <color name="before">#828282</color>
+    <!--after 同时控制着 "已对付"和"已售罄"字体颜色 理财产品_点击查看,已售罄,已兑付产品_更多-->
+    <color name="after">#f76e44</color>
+    <color name="underway">#ff0000</color>
+
+    <!--理财产品_点击查看,已售罄,已兑付产品_更多 黑色-->
+    <color name="more_textcolor">#323232</color>
+    <!--v2.0-->
     <color name="f5f4f2">#f5f4f2</color>
     <color name="z666666">#666666</color>
     <color name="fe6200">#fe6200</color>
@@ -43,7 +74,70 @@
     <color name="c8c5c3">#c8c5c3</color>
     <color name="f4f4f4">#f4f4f4</color>
     <color name="e53d1b">#e53d1b</color>
-    <color name="black">#ff000000</color>
-    <color name="ffffff">#ffffff</color>
+    <color name="e97037">#e97037</color>
+    <color name="ff9000">#ff9000</color>
+    <color name="z1ebcff">#1ebcff</color>
+    <color name="dae2cd">#dae2cd</color>
+    <color name="fed847">#fed847</color>
+    <color name="d2d2d2">#d2d2d2</color>
+    <color name="z646464">#646464</color>
+    <color name="z919191">#919191</color>
+    <color name="ff9800">#ff9800</color>
+    <!--关键字颜色值-->
+    <color name="z673AB7">#673ab7</color>
+    <color name="z3F51B5">#3f51b5</color>
+    <color name="z2196F3">#2196f3</color>
+    <color name="z03A9F4">#03a9f4</color>
+    <color name="z00BCD4">#00bcd4</color>
+    <color name="z009688">#009688</color>
+    <color name="z4CAF50">#4caf50</color>
+    <color name="z8BC34A">#8bc34a</color>
+    <color name="CDDC39">#cddc39</color>
+    <color name="FFC107">#ffc107</color>
+    <color name="FF9800">#ff9800</color>
+    <color name="FF5722">#ff5722</color>
+    <color name="z3E2723">#3e2723</color>
+    <color name="F44336">#f44336</color>
+    <color name="E91E63">#e91e63</color>
+    <color name="z9C27B0">#9c27b0</color>
+
+    <color name="z323232">#323232</color>
+    <color name="a0a0a0">#a0a0a0</color>
+    <color name="bcbcbc">#bcbcbc</color>
+    <color name="fbfbfb">#fbfbfb</color>
+    <color name="efefef">#efefef</color>
+    <color name="ffe5c7">#ffe5c7</color>
+    <color name="bababa">#bababa</color>
+    <color name="bbbbbb">#bbbbbb</color>
+
+
+    <color name="fbaf00">#fbaf00</color>
+    <color name="z00a0ff">#00a0ff</color>
+    <color name="ff6575">#ff6575</color>
+    <color name="z2dce8f">#2dce8f</color>
+    <color name="z9f9f9f">#9f9f9f</color>
+    <color name="z494948">#494948</color>
+
+    <color name="fee5c5">#FEE5C5</color>
+    <color name="ffe3bf">#FFE3BF</color>
+    <color name="ffbb44">#FFBB44</color>
+    <color name="ffe9c9">#FFE9C9</color>
+
+    <color name="bfbfbf">#bfbfbf</color>
+    <color name="b3b3b3">#b3b3b3</color>
+    <color name="ee2f15">#EE2F15</color>
+    <color name="ff9711">#ff9711</color>
+    <color name="ffa200">#ffa200</color>
+    <color name="ff7200">#ff7200</color>
+    <color name="f0f0f0">#f0f0f0</color>
+    <color name="f2f2f2">#f2f2f2</color>
+
+    <color name="z4d4d4d">#4d4d4d</color>
+    <color name="z4c4c4c">#4c4c4c</color>
+    <color name="fea406">#fea406</color>
+    <color name="z303030">#303030</color>
+    <color name="a800e2">#A800E2</color>
+    <color name="z6908ba">#6908BA</color>
+    <color name="fff4e5">#fff4e5</color>
 
 </resources>

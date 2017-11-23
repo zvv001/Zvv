@@ -32,28 +32,21 @@
     </declare-styleable>
 
     <!--自定义刻度尺-->
-    <declare-styleable name="RulerView">
-        <!--最大刻度-->
-        <attr name="max_value" format="dimension"/>
-        <!--最小刻度-->
-        <attr name="min_value" format="dimension"/>
-        <!--刻度字体大小-->
-        <attr name="scale_text_size" format="dimension"/>
-        <!--刻度字体颜色-->
-        <attr name="scale_text_color" format="color"/>
-        <!--刻度超过颜色-->
-        <attr name="scale_select_color" format="color"/>
-        <!--刻度超过颜色背景-->
-        <attr name="scale_select_background_color" format="color"/>
-        <!--刻度未超颜色-->
-        <attr name="scale_unselect_color" format="color"/>
-        <!--标记颜色-->
-        <attr name="tag_color" format="color"/>
-        <!--标尺开始显示位置-->
-        <attr name="start_location" format="dimension"/>
-        <!--一屏显示Item-->
-        <attr name="show_item_size" format="integer"/>
-        <!--一个刻度的大小-->
-        <attr name="one_item_value" format="integer"/>
+    <declare-styleable name="SlantedTextView">
+        <attr name="slantedTextSize" format="dimension" />
+        <attr name="slantedBackgroundColor" format="color" />
+        <attr name="slantedText" format="string" />
+        <attr name="slantedTextColor" format="color" />
+        <attr name="slantedLength" format="dimension" />
+        <attr name="slantedMode" format="enum">
+            <enum name="left" value="0"></enum>
+            <enum name="right" value="1"></enum>
+            <enum name="left_bottom" value="2"></enum>
+            <enum name="right_bottom" value="3"></enum>
+            <enum name="left_triangle" value="4"></enum>
+            <enum name="right_triangle" value="5"></enum>
+            <enum name="left_bottom_triangle" value="6"></enum>
+            <enum name="right_bottom_triangle" value="7"></enum>
+        </attr>
     </declare-styleable>
 </resources>

@@ -83,6 +83,8 @@
         </activity>
         <activity android:name=".Activity.CircularAnimationChartViewActivity">
         </activity>
+        <activity android:name=".Activity.DecimalScaleRulerViewActivity">
+        </activity>
     </application>
 
 </manifest>
