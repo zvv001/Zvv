@@ -8,7 +8,9 @@
     android:background="@color/f5f4f2"
     tools:context="com.vv.zvv.Activity.DecimalScaleRulerViewActivity">
 
+    <!--屏幕适配 百分比-->
     <android.support.percent.PercentRelativeLayout
+        android:id="@+id/prl_position"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/ffe3bf">
@@ -19,16 +21,28 @@
             android:layout_height="0dp"
             android:layout_alignParentTop="true"
             android:background="#7700ff00"
-            android:gravity="right|center_vertical"
-            android:text="w:70%, h:20%"
+            android:gravity="center_vertical"
+            android:text="百分比屏幕适配的应用__w:70%, h:20%"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="70%"/>
 
         <View
             android:layout_width="100dp"
             android:layout_height="match_parent"
+            android:alpha="0.3"
             android:background="@color/z1ebcff"/>
     </android.support.percent.PercentRelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_showNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prl_position"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="展示数据"
+        android:textSize="35sp"/>
 
     <!--自定义滑动标尺-->
     <RelativeLayout
@@ -96,10 +110,4 @@
         android:progress="20"
         android:progressDrawable="@drawable/progress_color_zvv"/>
 
-
-    <!--测试UI Demo-->
-    <View
-        android:layout_width="310dp"
-        android:layout_height="100dp"
-        android:background="@color/ff0000"/>
 </RelativeLayout>
