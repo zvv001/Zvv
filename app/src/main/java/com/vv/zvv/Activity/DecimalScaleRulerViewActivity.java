@@ -1,14 +1,17 @@
 package com.vv.zvv.Activity;
 
 import android.animation.ValueAnimator;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.vv.zvv.R;
+import com.vv.zvv.Utils.Base64Util;
 import com.vv.zvv.Utils.DrawUtil;
 import com.vv.zvv.Views.DecimalScaleRulerView;
 
@@ -47,8 +50,11 @@ public class DecimalScaleRulerViewActivity extends AppCompatActivity {
     @ViewInject(R.id.tv_showNumber)
     private TextView tv_showNumber;
 
+    @ViewInject(R.id.iv_base64)
+    private ImageView iv_base64;
 
     ValueAnimator valueAnimator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,6 +135,9 @@ public class DecimalScaleRulerViewActivity extends AppCompatActivity {
 
         );
 
+
+       Bitmap b  =  Base64Util.base64ToBitmap(Base64Util.baseDemo);
+        iv_base64.setImageBitmap(b);
     }
 
     /**

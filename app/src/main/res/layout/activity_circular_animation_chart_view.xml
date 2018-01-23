@@ -32,4 +32,10 @@
         android:layout_alignParentBottom="true"
         android:text="LoadData"
         android:textAllCaps="false"/>
+
+    <com.vv.zvv.Views.LocusPassWordView
+        android:id="@+id/locusPassWordView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ff9711"/>
 </RelativeLayout>

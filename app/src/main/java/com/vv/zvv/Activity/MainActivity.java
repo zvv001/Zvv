@@ -9,16 +9,18 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 
 import com.vv.zvv.Callback.OnModifyCallBack;
+import com.vv.zvv.R;
 import com.vv.zvv.Utils.ToastUtil;
 import com.vv.zvv.Views.MyCustomView;
-import com.vv.zvv.R;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -55,6 +57,9 @@ public class MainActivity extends Activity {
         mLinearLayout.setVisibility(View.GONE);
         /*测试用*/
 //        startActivity(new Intent(this, EditTextActivity.class));//直接跳转测试页
+
+        //相册地址
+        Log.e("storage", "storage:\n" + Environment.getExternalStorageDirectory().toString());
     }
 
     /**
@@ -68,7 +73,7 @@ public class MainActivity extends Activity {
             R.id.btn_AsyncTask_MainActivity, R.id.btn_dataPiker, R.id.btn_notification, R.id.btn_ProgressBar, R.id.btn_dataBase,
             R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
             R.id.btn_SwipeRefreshLayout, R.id.btn_ListView, R.id.btn_MyViewPager, R.id.btn_MyCustomView, R.id.btn_RetrofitActivity,
-            R.id.btn_threeExpandableListView, R.id.btn_CircularAnimationChartView, R.id.btn_DecimalScaleRulerView}, type = View.OnClickListener.class)
+            R.id.btn_threeExpandableListView, R.id.btn_CircularAnimationChartView, R.id.btn_DecimalScaleRulerView,R.id.btn_DemoView}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             /*xUtils3.0的使用*/
@@ -161,6 +166,9 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(this, DecimalScaleRulerViewActivity.class));
                 ToastUtil.showShortToast(this, "DecimalScaleRulerViewActivity");
                 break;
+            case R.id.btn_DemoView:
+                startActivity(new Intent(this, DemoActivity.class));
+                break;
             default:
                 break;
         }
@@ -191,6 +199,10 @@ public class MainActivity extends Activity {
 
         // Step4: 发布"通知"
         manager.notify(NOTIFICATION_ID, notification);//便于统一管理
+
+
+
+
     }
 
     //发布自定义通知

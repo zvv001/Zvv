@@ -110,4 +110,11 @@
         android:progress="20"
         android:progressDrawable="@drawable/progress_color_zvv"/>
 
+    <ImageView
+        android:id="@+id/iv_base64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
 </RelativeLayout>
