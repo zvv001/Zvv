@@ -1,11 +1,12 @@
 package com.vv.zvv.Activity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.vv.zvv.R;
-
-import org.xutils.common.util.LogUtil;
 
 /**
  * description: 临时文件
@@ -14,18 +15,10 @@ import org.xutils.common.util.LogUtil;
  * update: 2017/12/18
  * version:
  */
-public class DemoActivity extends AppCompatActivity {
-    //成员变量
-    private String strMember;//null
-    int intMember;//0
-    double doubleMember;//0.0
-    boolean booleanMember;//false
+public class DemoActivity extends Activity {
 
-
-    //构造方法
-    public DemoActivity(String strMember) {
-        this.strMember = strMember;
-    }
+    private EditText et_number;
+    private TextView tv_result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,33 +29,66 @@ public class DemoActivity extends AppCompatActivity {
     }
 
     private void init() {
-        //局部变量 必须赋初值，否则使用时系统会报错
-        String strLocal;
-        int intLocal;
-
-        // DemoActivity.init(L:35): 打印数据: ......
-        LogUtil.d("打印数据：strMember：" + strMember
-                + "strLocal: " + intMember
-                + "doubleMember: " + doubleMember
-                + "booleanMember: " + booleanMember
-
-        );//
+        et_number = (EditText) findViewById(R.id.et_number);
+        tv_result = (TextView) findViewById(R.id.tv_result);
 
     }
 
-
-    static void getAmountStatic() {
-
+    /*点击*/
+    public void OnClick(View view) {
+        if (view != null) {
+            switch (view.getId()) {
+                case R.id.btn_calculator:
+                        print();
+                default:
+                    break;
+            }
+        }
     }
 
-    void getSumNoneStatic() {
+    private void print() {
+        Wine a = new JNC();
+        a.fun1();
+    }
+
+}
+
+class Wine {
+    public void fun1(){
+        System.out.println("Wine 的Fun.....");
+        fun2();
+    }
+
+    public void fun2(){
+        System.out.println("Wine 的Fun2...");
     }
 }
 
+ class JNC extends Wine{
 
+//     public void fun1(){
+//         System.out.println("JNC 的 Fun1_01...");
+//     }
 
+    /**
+     * @desc 子类重写父类方法
+     *        父类中不存在该方法，向上转型后，父类是不能引用该方法的
+     * @param a
+     * @return void
+     */
+    public void fun1(String a){
+        System.out.println("JNC 的 Fun1...");
+        fun2();
+    }
 
-
+    /**
+     * 子类重写父类方法
+     * 指向子类的父类引用调用fun2时，必定是调用该方法
+     */
+    public void fun2(String nam){
+        System.out.println("JNC 的Fun2...");
+    }
+}
 
 
 

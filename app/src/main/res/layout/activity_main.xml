@@ -182,7 +182,12 @@ tools:context=".Activity.MainActivity">
             android:layout_height="wrap_content"
             android:text="DecimalScaleRulerView"
             android:textAllCaps="false"/>
-
+        <Button
+            android:id="@+id/btn_Base64Activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Base64"
+            android:textAllCaps="false"/>
         <Button
             android:id="@+id/btn_DemoView"
             android:layout_width="match_parent"

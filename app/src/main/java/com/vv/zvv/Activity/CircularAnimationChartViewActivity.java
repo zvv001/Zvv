@@ -9,6 +9,7 @@ import com.vv.zvv.JavaBean.CircularAnimationChartViewItem;
 import com.vv.zvv.R;
 import com.vv.zvv.Utils.ToastUtil;
 import com.vv.zvv.Views.CircularAnimationChartView;
+import com.vv.zvv.Views.LocusPassWordView;
 
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -37,6 +38,9 @@ public class CircularAnimationChartViewActivity extends AppCompatActivity {
     @ViewInject(R.id.magnificentChart)
     private CircularAnimationChartView circularAnimationChartView;
 
+    @ViewInject(R.id.locusPassWordView)
+    private LocusPassWordView locusPassWordView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,14 +56,20 @@ public class CircularAnimationChartViewActivity extends AppCompatActivity {
          /*动效统计图*/
         circularAnimationChartView = (CircularAnimationChartView) findViewById(R.id.magnificentChart);
         circularAnimationChartView.setChartBackgroundColor(Color.parseColor("#f5f4f2"));
+
+        locusPassWordView.setVisibility(View.GONE);
     }
 
-    @Event(value = {R.id.btn_loadData}, type = View.OnClickListener.class)
+    @Event(value = {R.id.btn_loadData, R.id.btn_showLocus}, type = View.OnClickListener.class)
     private void onCLick(View view) {
         switch (view.getId()) {
             case R.id.btn_loadData:
+                locusPassWordView.setVisibility(View.GONE);
                 ToastUtil.showShortToast(this, "Todo!");
                 initChat();
+                break;
+            case R.id.btn_showLocus:
+                locusPassWordView.setVisibility(View.VISIBLE);
                 break;
             default:
                 break;

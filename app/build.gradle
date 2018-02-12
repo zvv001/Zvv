@@ -20,6 +20,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
@@ -37,6 +48,10 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.mcxiaoke.volley:library:1.0.19'
-
     compile 'com.android.support:percent:23.0.0'
+    compile files('src/main/libs/BASE64Encoder.jar')
+    compile 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    compile files('src/main/libs/fontbox-2.0.1.jar')
+    compile files('src/main/libs/pdfbox-2.0.1.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }
