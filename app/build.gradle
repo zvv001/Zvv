@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 28
 
     /*为了学习HttpClient - Android SDK中包含了HttpClient，在Android6.0版本直接删除了HttpClient类库*/
     useLibrary 'org.apache.http.legacy'
@@ -10,9 +9,12 @@ android {
     defaultConfig {
         applicationId "com.vv.zvv"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions("shantui")
     }
     buildTypes {
         release {
@@ -34,24 +36,28 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
-    //    compile 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    //    implementation 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
     /*xUtils依赖*/
-    compile 'org.xutils:xutils:3.3.40'
+    implementation 'org.xutils:xutils:3.3.40'
     /*gson 将请求下的数据转换*/
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.alibaba:fastjson:1.2.31'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.alibaba:fastjson:1.2.31'
     /*retrofit*/
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-    compile 'com.mcxiaoke.volley:library:1.0.19'
-    compile 'com.android.support:percent:23.0.0'
-    compile files('src/main/libs/BASE64Encoder.jar')
-    compile 'com.github.barteksc:android-pdf-viewer:2.8.2'
-    compile files('src/main/libs/fontbox-2.0.1.jar')
-    compile files('src/main/libs/pdfbox-2.0.1.jar')
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.android.support:percent:28.0.0'
+    implementation files('src/main/libs/BASE64Encoder.jar')
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation files('src/main/libs/fontbox-2.0.1.jar')
+    implementation files('src/main/libs/pdfbox-2.0.1.jar')
+    implementation 'com.google.android.gms:play-services-appindexing:8.1.0'
+
+
 }

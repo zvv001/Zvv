@@ -38,8 +38,7 @@
         <item name="android:gravity">center_vertical</item>
     </style>
 
-    <style name="Animation_Activity"
-           parent="@android:style/Animation.Activity">
+    <style name="Animation_Activity" parent="@android:style/Animation.Activity">
         <!--
         <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
         <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
@@ -55,6 +54,7 @@
     <style name="AppTheme_" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@style/Animation_Activity</item>
+        <item name="android:listDivider">@color/z00a0ff</item>
     </style>
 
     <style name="AppTheme_.NoActionBar">
@@ -62,7 +62,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme_.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme_.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme_.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme_.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

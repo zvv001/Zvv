@@ -53,7 +53,7 @@ public class MyElectronicCoupons extends LinearLayout {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int CircleCount = getWidth() / (radius * 2 + gap * 2)+1;//要不要加1看实际效果
+        int CircleCount = getWidth() / (radius * 2 + gap * 2) + 1;//要不要加1看实际效果
         for (int i = 0; i < CircleCount; i++) {
             canvas.drawCircle((radius + gap) * (2 * i - 1), 0, radius, mPaint);
             canvas.drawCircle((radius + gap) * (2 * i - 1), getHeight(), radius, mPaint);

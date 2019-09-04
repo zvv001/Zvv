@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Zvv</string>
     <string name="title_activity_base64">Base64Activity</string>
+
+
+    <string-array name="study_view_spinner_values">
+        <item>不限</item>
+        <item>0-1000元</item>
+        <item>1000-5000元</item>
+        <item>5000-10000元</item>
+        <item>10000元以上</item>
+
+    </string-array>
 </resources>

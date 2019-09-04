@@ -56,7 +56,7 @@ public class RetrofitActivity extends AppCompatActivity {
                 }).show();
                 break;
             case R.id.btn_btn_toastUtil:
-                ToastUtil.showShortToast(RetrofitActivity.this,"点击了！");
+                ToastUtil.showShortToast(RetrofitActivity.this, "点击了！");
                 break;
             default:
                 break;
@@ -67,8 +67,8 @@ public class RetrofitActivity extends AppCompatActivity {
     //https://api.github.com/users/basil2style
     //https://api.github.com/users/zvv001/repos
     public interface DemoService {
-        //        @GET("users/basil2style")
-//        Call<Repo> testHttpGet();
+        // @GET("users/basil2style")
+        // Call<Repo> testHttpGet();
         @GET("users/{user}/repos")
         Call<List<Repo>> testHttpGet(@Path("user") String user);
     }

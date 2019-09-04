@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -74,7 +75,7 @@ public class MainActivity extends Activity {
             R.id.btn_broadcast, R.id.btn_service, R.id.btn_CountDownTimer, R.id.btn_ScrollViewDemo, R.id.btn_EditTextDemo,
             R.id.btn_SwipeRefreshLayout, R.id.btn_ListView, R.id.btn_MyViewPager, R.id.btn_MyCustomView, R.id.btn_RetrofitActivity,
             R.id.btn_threeExpandableListView, R.id.btn_CircularAnimationChartView, R.id.btn_DecimalScaleRulerView,R.id.btn_DemoView,
-            R.id.btn_Base64Activity}, type = View.OnClickListener.class)
+            R.id.btn_Base64Activity,R.id.btn_RecycleView,R.id.btn_spinner}, type = View.OnClickListener.class)
     private void onClick(View view) {
         switch (view.getId()) {
             /*xUtils3.0的使用*/
@@ -175,6 +176,14 @@ public class MainActivity extends Activity {
 
 //                startActivity(new Intent(this,AndroidPdfViewActivity.class));
                 break;
+
+            case R.id.btn_RecycleView:
+                startActivity(new Intent(this, RecyclerViewActivity.class));
+                break;
+
+            case R.id.btn_spinner:
+                 startActivity(new Intent(this,SpinnerActivity.class));
+                 break;
             default:
                 break;
         }

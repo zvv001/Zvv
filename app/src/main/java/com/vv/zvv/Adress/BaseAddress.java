@@ -6,6 +6,8 @@ package com.vv.zvv.Adress;
 public class BaseAddress {
     private final static String HOST = "http://www.maizjr.com";
 
+
+
     public String getBaseAddress() {
         return HOST;
     }

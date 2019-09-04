@@ -1,237 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingBottom="@dimen/activity_vertical_margin"
-android:paddingLeft="@dimen/activity_horizontal_margin"
-android:paddingRight="@dimen/activity_horizontal_margin"
-android:paddingTop="@dimen/activity_vertical_margin"
-tools:context=".Activity.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Activity.MainActivity">
 
-<TextView
-    android:id="@+id/tv_title_MainActivity"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"/>
+    <TextView
+        android:id="@+id/tv_title_MainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
 
-<ScrollView
-    android:layout_width="120dp"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/tv_title_MainActivity"
-    android:background="#fff">
+    <ScrollView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_MainActivity"
+        android:background="#fff">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_xUtils_MainActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="xUtils"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_test01_MainActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="存储"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_AsyncTask_MainActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AsyncTask"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_dataPiker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data/TimerPiker"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProgressBar"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_dataBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DataBase"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_broadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Broadcast"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_CountDownTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CountDownTimer"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_ScrollViewDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ScrollViewDemo"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_EditTextDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EditTextDemo"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_SwipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SwipeRefreshLayout"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_ListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ListView优化"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_MyViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义ViewPager"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_MyCustomView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义View展示"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_RetrofitActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="retrofit"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_threeExpandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="三级联动"
+                android:textAllCaps="false" />
+
+            <!--环（圆）形动态统计图-->
+            <Button
+                android:id="@+id/btn_CircularAnimationChartView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CircularAnimationChartView"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_MainActivity"
+        android:layout_alignParentRight="true"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_DecimalScaleRulerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DecimalScaleRulerView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_Base64Activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Base64"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_DemoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_RecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecycleViewDemo"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SpinnerDemo"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--进度条对话框-->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout_notification"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_centerHorizontal="true"
+        android:background="#000"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
 
         <Button
-            android:id="@+id/btn_xUtils_MainActivity"
+            android:id="@+id/btn_commonNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="xUtils"
-            android:textAllCaps="false"/>
+            android:text="普通通知" />
 
         <Button
-            android:id="@+id/btn_test01_MainActivity"
+            android:id="@+id/btn_customNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="存储"
-            android:textAllCaps="false"/>
+            android:text="自定义通知" />
 
         <Button
-            android:id="@+id/btn_AsyncTask_MainActivity"
+            android:id="@+id/btn_progressNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AsyncTask"
-            android:textAllCaps="false"/>
+            android:text="进度条通知" />
 
         <Button
-            android:id="@+id/btn_dataPiker"
+            android:id="@+id/btn_cancelNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Data/TimerPiker"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_notification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notification"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_ProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ProgressBar"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_dataBase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DataBase"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_broadcast"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Broadcast"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_service"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Service"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_CountDownTimer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CountDownTimer"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_ScrollViewDemo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ScrollViewDemo"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_EditTextDemo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="EditTextDemo"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_SwipeRefreshLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SwipeRefreshLayout"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_ListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ListView优化"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_MyViewPager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="自定义ViewPager"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_MyCustomView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="自定义View展示"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_RetrofitActivity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="retrofit"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/btn_threeExpandableListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="三级联动"
-            android:textAllCaps="false"/>
-
-        <!--环（圆）形动态统计图-->
-        <Button
-            android:id="@+id/btn_CircularAnimationChartView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CircularAnimationChartView"
-            android:textAllCaps="false"/>
+            android:text="取消通知" />
     </LinearLayout>
-
-</ScrollView>
-
-<ScrollView
-    android:layout_width="120dp"
-    android:layout_height="wrap_content"
-    android:layout_alignParentRight="true"
-    android:layout_below="@+id/tv_title_MainActivity"
-    android:background="#fff">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_DecimalScaleRulerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DecimalScaleRulerView"
-            android:textAllCaps="false"/>
-        <Button
-            android:id="@+id/btn_Base64Activity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Base64"
-            android:textAllCaps="false"/>
-        <Button
-            android:id="@+id/btn_DemoView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Demo"
-            android:textAllCaps="false"/>
-    </LinearLayout>
-
-</ScrollView>
-
-<!--进度条对话框-->
-<LinearLayout
-    android:id="@+id/linearLayout_notification"
-    android:layout_width="300dp"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:background="#000"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:visibility="gone">
-
-    <Button
-        android:id="@+id/btn_commonNotification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="普通通知"/>
-
-    <Button
-        android:id="@+id/btn_customNotification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义通知"/>
-
-    <Button
-        android:id="@+id/btn_progressNotification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="进度条通知"/>
-
-    <Button
-        android:id="@+id/btn_cancelNotification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="取消通知"/>
-</LinearLayout>
 
 </RelativeLayout>

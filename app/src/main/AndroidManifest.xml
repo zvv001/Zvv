@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.vv.zvv"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vv.zvv">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".Activity.MyApplication"
@@ -15,85 +15,65 @@
         android:theme="@style/AppTheme_">
         <activity android:name=".Activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.XUtilsActivity">
-        </activity>
-        <activity android:name=".Activity.StorageActivity">
-        </activity>
-        <activity android:name=".Activity.ExternalStorageActivity">
-        </activity>
-        <activity android:name=".Activity.SharedPreferenceActivity">
-        </activity>
-        <activity android:name=".Activity.AsyncTaskActivity">
-        </activity>
-        <activity android:name=".Activity.DataPikerActivity">
-        </activity>
-        <activity android:name=".Activity.ProgressActivity">
-        </activity>
-        <activity android:name=".Activity.DatabaseActivity">
-        </activity>
-        <activity android:name=".Activity.CursorAdapterActivity">
-        </activity>
-        <activity android:name=".Activity.SimpleCursorAdapterActivity">
-        </activity>
-        <activity android:name=".Activity.SimpleAdapterActivity">
-        </activity>
-        <activity android:name=".Activity.BroadcastActivity">
-        </activity>
+        <activity android:name=".Activity.XUtilsActivity" />
+        <activity android:name=".Activity.StorageActivity" />
+        <activity android:name=".Activity.ExternalStorageActivity" />
+        <activity android:name=".Activity.SharedPreferenceActivity" />
+        <activity android:name=".Activity.AsyncTaskActivity" />
+        <activity android:name=".Activity.DataPikerActivity" />
+        <activity android:name=".Activity.ProgressActivity" />
+        <activity android:name=".Activity.DatabaseActivity" />
+        <activity android:name=".Activity.CursorAdapterActivity" />
+        <activity android:name=".Activity.SimpleCursorAdapterActivity" />
+        <activity android:name=".Activity.SimpleAdapterActivity" />
+        <activity android:name=".Activity.BroadcastActivity" />
 
         <!-- 注册广播 -->
         <receiver android:name=".Utils.MyBroadCastReceiverRegisterInManifest">
             <intent-filter android:priority="900">
-                <action android:name="com.vv.zvv_sendBroadcast"/>
+                <action android:name="com.vv.zvv_sendBroadcast" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Activity.ServiceActivity">
-        </activity>
+        <activity android:name=".Activity.ServiceActivity" />
 
-        <service android:name=".Utils.MyService"/>
-        <service android:name=".Utils.MyBoundService"/>
+        <service android:name=".Utils.MyService" />
+        <service android:name=".Utils.MyBoundService" />
 
-        <activity android:name=".Activity.CountDownTimerActivity">
-        </activity>
-        <activity android:name=".Activity.EditTextActivity">
-        </activity>
-        <activity android:name=".Activity.ScrollViewActivity"/>
-        <activity android:name=".Activity.SwipeRefreshLayoutActivity">
-        </activity>
+        <activity android:name=".Activity.CountDownTimerActivity" />
+        <activity android:name=".Activity.EditTextActivity" />
+        <activity android:name=".Activity.ScrollViewActivity" />
+        <activity android:name=".Activity.SwipeRefreshLayoutActivity" />
         <activity
             android:name=".Activity.ListViewDemoActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity android:name=".Activity.MyViewPagerActivity">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Activity.MyViewPagerActivity" />
         <activity
             android:name=".Views.MyCustomView"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity android:name=".Activity.RetrofitActivity">
-        </activity>
-        <activity android:name=".Activity.VolleyActivity">
-        </activity>
-        <activity android:name=".Activity.ThreeExpandableListViewActivity">
-        </activity>
-        <activity android:name=".Activity.CircularAnimationChartViewActivity">
-        </activity>
-        <activity android:name=".Activity.DecimalScaleRulerViewActivity">
-        </activity>
-        <activity
-            android:name=".Activity.Base64Activity">
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Activity.RetrofitActivity" />
+        <activity android:name=".Activity.VolleyActivity" />
+        <activity android:name=".Activity.ThreeExpandableListViewActivity" />
+        <activity android:name=".Activity.CircularAnimationChartViewActivity" />
+        <activity android:name=".Activity.DecimalScaleRulerViewActivity" />
+        <activity android:name=".Activity.Base64Activity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
-        <activity android:name=".Activity.AndroidPdfViewActivity"/>
-        <activity android:name=".Activity.DemoActivity"/>
+            android:value="@integer/google_play_services_version" />
+
+        <!-- <activity android:name=".Activity.AndroidPdfViewActivity" /> -->
+        <activity android:name=".Activity.DemoActivity" />
+        <activity android:name=".Activity.RecyclerViewActivity" />
+        <activity android:name=".Activity.SpinnerActivity"></activity>
     </application>
 
 </manifest>

@@ -21,13 +21,13 @@
         app:showTitle="false"/>
 
 
-    <com.vv.zvv.Views.LocusPassWordView
-        android:id="@+id/locusPassWordView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="50dp"
-        android:background="@color/ff9711"
-        android:visibility="visible"/>
+    <!--<com.vv.zvv.Views.LocusPassWordView-->
+        <!--android:id="@+id/locusPassWordView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="50dp"-->
+        <!--android:background="@color/ff9711"-->
+        <!--android:visibility="visible"/>-->
 
     <Button
         android:id="@+id/btn_loadData"
